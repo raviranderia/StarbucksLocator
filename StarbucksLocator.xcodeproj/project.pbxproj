@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */; };
-		0DE2BBF11E2804BD00046FB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF01E2804BD00046FB3 /* ViewController.swift */; };
 		0DE2BBF41E2804BD00046FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF21E2804BD00046FB3 /* Main.storyboard */; };
-		0DE2BBF71E2804BD00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF51E2804BD00046FB3 /* StarbucksLocator.xcdatamodeld */; };
 		0DE2BBF91E2804BD00046FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */; };
 		0DE2BBFC1E2804BD00046FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBFA1E2804BD00046FB3 /* LaunchScreen.storyboard */; };
 		0DE2BC071E2804BE00046FB3 /* StarbucksLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC061E2804BE00046FB3 /* StarbucksLocatorTests.swift */; };
+		0DE2BC191E2814C000046FB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC181E2814C000046FB3 /* ViewController.swift */; };
+		0DE2BC1D1E2814DB00046FB3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BC1A1E2814DB00046FB3 /* Info.plist */; };
+		0DE2BC211E28151B00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC1F1E28151B00046FB3 /* StarbucksLocator.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +30,15 @@
 /* Begin PBXFileReference section */
 		0DE2BBEB1E2804BD00046FB3 /* StarbucksLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DE2BBF01E2804BD00046FB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0DE2BBF31E2804BD00046FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0DE2BBF61E2804BD00046FB3 /* StarbucksLocator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarbucksLocator.xcdatamodel; sourceTree = "<group>"; };
 		0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DE2BBFB1E2804BD00046FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0DE2BBFD1E2804BD00046FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE2BC021E2804BE00046FB3 /* StarbucksLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarbucksLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE2BC061E2804BE00046FB3 /* StarbucksLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksLocatorTests.swift; sourceTree = "<group>"; };
 		0DE2BC081E2804BE00046FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE2BC181E2814C000046FB3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Features/Main/ViewController.swift; sourceTree = "<group>"; };
+		0DE2BC1A1E2814DB00046FB3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		0DE2BC201E28151B00046FB3 /* StarbucksLocator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarbucksLocator.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */,
-				0DE2BBF01E2804BD00046FB3 /* ViewController.swift */,
-				0DE2BBF21E2804BD00046FB3 /* Main.storyboard */,
-				0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */,
-				0DE2BBFA1E2804BD00046FB3 /* LaunchScreen.storyboard */,
-				0DE2BBFD1E2804BD00046FB3 /* Info.plist */,
-				0DE2BBF51E2804BD00046FB3 /* StarbucksLocator.xcdatamodeld */,
+				0DE2BC111E2812C100046FB3 /* Features */,
+				0DE2BC151E2812E600046FB3 /* Utilities */,
+				0DE2BC141E2812DE00046FB3 /* Extensions */,
+				0DE2BC121E2812CD00046FB3 /* Networking */,
+				0DE2BC131E2812D600046FB3 /* Models */,
+				0DE2BC161E2812F900046FB3 /* Resources */,
 			);
 			path = StarbucksLocator;
 			sourceTree = "<group>";
@@ -97,6 +98,62 @@
 				0DE2BC081E2804BE00046FB3 /* Info.plist */,
 			);
 			path = StarbucksLocatorTests;
+			sourceTree = "<group>";
+		};
+		0DE2BC111E2812C100046FB3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0DE2BC171E28132900046FB3 /* Main */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		0DE2BC121E2812CD00046FB3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		0DE2BC131E2812D600046FB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0DE2BC141E2812DE00046FB3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0DE2BC151E2812E600046FB3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		0DE2BC161E2812F900046FB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0DE2BC1F1E28151B00046FB3 /* StarbucksLocator.xcdatamodeld */,
+				0DE2BC1A1E2814DB00046FB3 /* Info.plist */,
+				0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */,
+				0DE2BBFA1E2804BD00046FB3 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0DE2BC171E28132900046FB3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0DE2BC181E2814C000046FB3 /* ViewController.swift */,
+				0DE2BBF21E2804BD00046FB3 /* Main.storyboard */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE2BC1D1E2814DB00046FB3 /* Info.plist in Resources */,
 				0DE2BBFC1E2804BD00046FB3 /* LaunchScreen.storyboard in Resources */,
 				0DE2BBF91E2804BD00046FB3 /* Assets.xcassets in Resources */,
 				0DE2BBF41E2804BD00046FB3 /* Main.storyboard in Resources */,
@@ -202,8 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE2BBF11E2804BD00046FB3 /* ViewController.swift in Sources */,
-				0DE2BBF71E2804BD00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */,
+				0DE2BC191E2814C000046FB3 /* ViewController.swift in Sources */,
+				0DE2BC211E28151B00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */,
 				0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = StarbucksLocator/Info.plist;
+				INFOPLIST_FILE = StarbucksLocator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.randeria.StarbucksLocator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,7 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = StarbucksLocator/Info.plist;
+				INFOPLIST_FILE = StarbucksLocator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.randeria.StarbucksLocator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,13 +478,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0DE2BBF51E2804BD00046FB3 /* StarbucksLocator.xcdatamodeld */ = {
+		0DE2BC1F1E28151B00046FB3 /* StarbucksLocator.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0DE2BBF61E2804BD00046FB3 /* StarbucksLocator.xcdatamodel */,
+				0DE2BC201E28151B00046FB3 /* StarbucksLocator.xcdatamodel */,
 			);
-			currentVersion = 0DE2BBF61E2804BD00046FB3 /* StarbucksLocator.xcdatamodel */;
-			path = StarbucksLocator.xcdatamodeld;
+			currentVersion = 0DE2BC201E28151B00046FB3 /* StarbucksLocator.xcdatamodel */;
+			name = StarbucksLocator.xcdatamodeld;
+			path = Resources/StarbucksLocator.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
