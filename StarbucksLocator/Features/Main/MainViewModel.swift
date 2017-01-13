@@ -15,6 +15,7 @@ struct MainViewModel {
         DispatchQueue.global().async {
             self.googlePlacesManager.fetchNearbyStarbucksStores { (starbucksStoreList) in
                 DispatchQueue.main.async {
+                    print(starbucksStoreList)
                     completion(starbucksStoreList)
                 }
             }

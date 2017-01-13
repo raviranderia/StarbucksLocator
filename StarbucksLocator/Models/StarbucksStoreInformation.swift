@@ -10,7 +10,9 @@ import Foundation
 import CoreLocation
 import UIKit
 
-struct StarbucksStoreInformation {
+class StarbucksStoreInformation {
+    private let requestManager = RequestManager.shared
+
     var formattedAddress: String?
     var location: CLLocation?
     var iconURL: URL?
@@ -19,8 +21,7 @@ struct StarbucksStoreInformation {
     var priceLevel: Int?
     var photoReference: String?
     
-//    var starbucksStoreImage: UIImage?
-//    var iconImage: UIImage?
+    var starbucksStoreImage: UIImage?
     
     init(starbucksJSON: [String: Any]) {
         if let formattedAddress = starbucksJSON["formatted_address"] as? String {
@@ -59,11 +60,6 @@ struct StarbucksStoreInformation {
             } else {
                 self.location = nil
             }
-     
-//        if let photoReference = self.photoReference {
-//            
-//        }
-        
-    }
+        }
 }
 

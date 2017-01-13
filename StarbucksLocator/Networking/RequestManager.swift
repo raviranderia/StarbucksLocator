@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 enum Result<T> {
     case success((T))
@@ -16,6 +17,7 @@ enum Result<T> {
 
 enum NetworkOperationError: Error {
     case errorJSON
+    case errorImage
     case getRequestNotSuccessful
     case notValidHTTPResponse
 }
@@ -27,20 +29,8 @@ struct RequestManager {
     private init() { }
     
     func fetchNearbyStarbucksStores(location: CLLocation, radius: Int, completion: @escaping (Result<[String:Any]>) -> ()) {
-        apiCall(method: .getNearbyStarbucks(location, radius)) { (result) in
-            completion(result)
-        }
-    }
-    
-    func getImageFromURL(photoReference: String, maxWidth: Int, completion: @escaping (Result<[String:Any]>) -> ()) {
-        apiCall(method: .getPhotoByReference(photoReference, maxWidth)) { (result) in
-            completion(result)
-        }
-    }
-    
-    private func apiCall(method: Router, completion: @escaping (Result<[String: Any]>) -> ()) {
+        let method = Router.getNearbyStarbucks(location, radius)
         let session = URLSession.shared
-        print(method.asURLRequest())
         let dataTask = session.dataTask(with: method.asURLRequest()) { (data, response, error) in
             if let httpResponse = response as? HTTPURLResponse {
                 switch(httpResponse.statusCode) {
@@ -51,6 +41,30 @@ struct RequestManager {
                     } catch {
                         completion(.failure(NetworkOperationError.errorJSON))
                     }
+                default :
+                    completion(.failure(NetworkOperationError.getRequestNotSuccessful))
+                }
+            } else {
+                completion(.failure(NetworkOperationError.notValidHTTPResponse))
+            }
+        }
+        dataTask.resume()
+    }
+    
+    func getImageFromURL(photoReference: String, maxWidth: CGFloat, completion: @escaping (Result<UIImage>) -> ()) {
+        let method = Router.getPhotoByReference(photoReference, maxWidth)
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: method.asURLRequest()) { (data, response, error) in
+            if let httpResponse = response as? HTTPURLResponse {
+                switch(httpResponse.statusCode) {
+                case 200:
+                    if let data = data,
+                        let image = UIImage(data: data) {
+                        completion(.success(image))
+                    } else {
+                        completion(.failure(NetworkOperationError.errorImage))
+                    }
+                    
                 default :
                     completion(.failure(NetworkOperationError.getRequestNotSuccessful))
                 }

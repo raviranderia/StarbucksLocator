@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 enum Router {
     
@@ -15,14 +16,14 @@ enum Router {
     static let privateKey = "AIzaSyA6MkeogfruwFTSHBl4zg8GzeFzNso_xL0"
 
     case getNearbyStarbucks(CLLocation,Int)
-    case getPhotoByReference(String,Int)
+    case getPhotoByReference(String,CGFloat)
 
     var path: String {
         switch self {
         case .getNearbyStarbucks(_, _):
             return "/textsearch/json?query=Starbucks"
         case .getPhotoByReference(_,let maxWidth):
-            return "/photo?maxWidth=\(maxWidth)"
+            return "/photo?maxwidth=\(Int(maxWidth))"
         }
     }
     
@@ -42,7 +43,6 @@ enum Router {
     }
     
     func addParametersToRequest(url: URL, params: [String: String]) -> URLRequest {
-        print(url)
         var parameters = ""
         for (key,value) in params {
             parameters += ("&\(key)=\(value)")

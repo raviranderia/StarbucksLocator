@@ -37,7 +37,7 @@ struct GooglePlacesManager {
         }
     }
     
-    func mapDictionaryToStarbucksModelArray(responseDictionary: [String: Any], completion: (Result<[StarbucksStoreInformation]>) -> ()) {
+    private func mapDictionaryToStarbucksModelArray(responseDictionary: [String: Any], completion: (Result<[StarbucksStoreInformation]>) -> ()) {
         var starbucksStoreList = [StarbucksStoreInformation]()
         if let results = responseDictionary["results"] as? [[String: Any]] {
             for storeInformation in results {

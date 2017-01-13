@@ -16,5 +16,9 @@ class StarbucksInformationCollectionViewCell: UICollectionViewCell {
     
     func configureCell(starbucksInformationCellViewModel: StarbucksInformationCellViewModel) {
         self.addressLabel.text = starbucksInformationCellViewModel.address
+        if let photoReference = starbucksInformationCellViewModel.photoReference {
+            self.starbucksImageView.getImageFrom(photoReference: photoReference)
+        }
+        
     }
 }

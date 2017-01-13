@@ -104,11 +104,41 @@
                     <navigationItem key="navigationItem" id="pd0-1R-S39"/>
                     <connections>
                         <outlet property="starbucksCollectionView" destination="nCm-J5-uN9" id="dRB-QY-smz"/>
+                        <segue destination="Lgy-sx-VQF" kind="show" id="rlg-3F-pta"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ItI-tm-Tea">
+            <objects>
+                <viewController id="Lgy-sx-VQF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y6b-RC-PC4"/>
+                        <viewControllerLayoutGuide type="bottom" id="X64-Ao-CD7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jAC-qW-Op2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="90i-OC-9eq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X64-Ao-CD7" firstAttribute="top" secondItem="90i-OC-9eq" secondAttribute="bottom" id="CQZ-So-VEI"/>
+                            <constraint firstAttribute="trailing" secondItem="90i-OC-9eq" secondAttribute="trailing" id="HFW-DJ-QwK"/>
+                            <constraint firstItem="90i-OC-9eq" firstAttribute="leading" secondItem="jAC-qW-Op2" secondAttribute="leading" id="KWs-Mz-jbi"/>
+                            <constraint firstItem="90i-OC-9eq" firstAttribute="top" secondItem="jAC-qW-Op2" secondAttribute="top" id="tJI-8z-8rP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwE-Yr-9aA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SDM-R8-gu7">
@@ -126,7 +156,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9II-qH-W1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+            <point key="canvasLocation" x="303" y="139"/>
         </scene>
     </scenes>
     <resources>
