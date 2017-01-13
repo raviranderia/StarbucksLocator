@@ -11,18 +11,13 @@ import CoreLocation
 
 class MainViewController: UIViewController {
 
-    let googlePlacesManager = GooglePlacesManager.shared
+    let mainViewModel = MainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        googlePlacesManager.fetchNearbyStarbucksStores { (starbucksStoreList) in
-            print(starbucksStoreList)
+        mainViewModel.fetchNearbyStarbucksStores { (result) in
+            print(result)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

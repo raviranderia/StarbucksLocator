@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D1005E61E29123D00C69D90 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1005E51E29123D00C69D90 /* LocationManager.swift */; };
 		0D1005E81E291A4000C69D90 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1005E71E291A4000C69D90 /* GooglePlacesManager.swift */; };
+		0DD556CC1E29272300407098 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556CB1E29272300407098 /* MainViewModel.swift */; };
 		0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */; };
 		0DE2BBF41E2804BD00046FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF21E2804BD00046FB3 /* Main.storyboard */; };
 		0DE2BBF91E2804BD00046FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		0D1005E51E29123D00C69D90 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Utilities/LocationManager.swift; sourceTree = "<group>"; };
 		0D1005E71E291A4000C69D90 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
+		0DD556CB1E29272300407098 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewModel.swift; path = Features/Main/MainViewModel.swift; sourceTree = "<group>"; };
 		0DE2BBEB1E2804BD00046FB3 /* StarbucksLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE2BBF31E2804BD00046FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				0DE2BC261E281FDC00046FB3 /* StarbucksCollectionViewCell */,
 				0DE2BC181E2814C000046FB3 /* MainViewController.swift */,
+				0DD556CB1E29272300407098 /* MainViewModel.swift */,
 				0DE2BBF21E2804BD00046FB3 /* Main.storyboard */,
 			);
 			name = Main;
@@ -299,6 +302,7 @@
 				0DE2BC2C1E28208700046FB3 /* StarbucksInformationCollectionViewCell.swift in Sources */,
 				0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */,
 				0D1005E61E29123D00C69D90 /* LocationManager.swift in Sources */,
+				0DD556CC1E29272300407098 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
