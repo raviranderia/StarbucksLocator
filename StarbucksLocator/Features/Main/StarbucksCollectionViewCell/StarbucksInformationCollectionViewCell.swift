@@ -17,6 +17,8 @@ class StarbucksInformationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     
     func configureCell(starbucksInformationCellViewModel: StarbucksInformationCellViewModel) {
-        
+        self.nameLabel.text = starbucksInformationCellViewModel.name
+        self.addressLabel.text = starbucksInformationCellViewModel.address
+        self.priceLevelLabel.text = starbucksInformationCellViewModel.priceLevel
     }
 }
