@@ -12,6 +12,7 @@ struct GooglePlacesManager {
     private let requestManager = RequestManager.shared
     private let locationManager = LocationManager.shared
     private let defaultRadius = 100
+    private let dataManager = DataManager.shared
     
     static let shared = GooglePlacesManager()
     private init() {}
@@ -41,7 +42,9 @@ struct GooglePlacesManager {
         var starbucksStoreList = [StarbucksStoreInformation]()
         if let results = responseDictionary["results"] as? [[String: Any]] {
             for storeInformation in results {
-                starbucksStoreList.append(StarbucksStoreInformation(starbucksJSON: storeInformation))
+                let starbucksInformation = StarbucksStoreInformation(starbucksJSON: storeInformation)
+                starbucksStoreList.append(starbucksInformation)
+                dataManager.saveStarbucksStoreInfo(starbucksStore: starbucksInformation)
             }
             completion(.success(starbucksStoreList))
         } else {

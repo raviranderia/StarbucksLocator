@@ -35,14 +35,14 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! StarbucksInformationCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mainViewModel.collectionViewCellIdentifier, for: indexPath) as! StarbucksInformationCollectionViewCell
         let starbucksCollectionCellViewModel = StarbucksInformationCellViewModel(starbucksStoreInformation: starbucksStoreInformation[indexPath.row])
         cell.configureCell(starbucksInformationCellViewModel: starbucksCollectionCellViewModel)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(starbucksStoreInformation[indexPath.row])
+        performSegue(withIdentifier: mainViewModel.segueIdentifer, sender: starbucksStoreInformation[indexPath.row])
     }
     
     private func displayError(message: String) {
@@ -52,6 +52,13 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         alertController.addAction(alertAction)
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? MapViewController,
+            let selectedStore = sender as? StarbucksStoreInformation{
+            destinationVC.currentStarbucksStoreInfo = selectedStore
+        }
     }
 }
 

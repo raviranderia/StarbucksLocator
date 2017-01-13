@@ -47,7 +47,9 @@ enum Router {
         for (key,value) in params {
             parameters += ("&\(key)=\(value)")
         }
-        return URLRequest(url: URL(string: url.absoluteString + parameters + "&key=\(Router.privateKey)")!)
+        let urlRequest = URLRequest(url: URL(string: url.absoluteString + parameters + "&key=\(Router.privateKey)")!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10)
+        print(urlRequest)
+        return urlRequest
     }
     
 }

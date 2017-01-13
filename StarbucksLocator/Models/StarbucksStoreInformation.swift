@@ -15,21 +15,17 @@ class StarbucksStoreInformation {
 
     var formattedAddress: String?
     var location: CLLocation?
-    var iconURL: URL?
     var name: String?
     var openNow: Bool?
     var priceLevel: Int?
     var photoReference: String?
+    var id: String?
     
     var starbucksStoreImage: UIImage?
     
     init(starbucksJSON: [String: Any]) {
         if let formattedAddress = starbucksJSON["formatted_address"] as? String {
             self.formattedAddress = formattedAddress
-        }
-        
-        if let iconURLString = starbucksJSON["icon"] as? String, let url = URL(string: iconURLString) {
-            self.iconURL = url
         }
         
         if let name = starbucksJSON["name"] as? String {
@@ -48,6 +44,10 @@ class StarbucksStoreInformation {
         if let photos = starbucksJSON["photos"] as? [[String: Any]],
             let photoReference = photos[0]["photo_reference"] as? String {
             self.photoReference = photoReference
+        }
+        
+        if let id = starbucksJSON["id"] as? String {
+            self.id = id
         }
         
         if let geometry = starbucksJSON["geometry"] as? [String: Any],
