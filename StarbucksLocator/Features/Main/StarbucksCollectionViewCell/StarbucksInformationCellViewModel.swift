@@ -7,7 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 struct StarbucksInformationCellViewModel {
     
+//    var starbucksImage: UIImage
+//    var nameLabel: String
+//    var addressLabel: String
+//    var priceLevelLabel: String
+//    var iconImageView: UIImage
+//    
+//    init(starbucksStoreInformation: StarbucksStoreInformation) {
+//        
+//    }
 }

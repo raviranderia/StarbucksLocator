@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1005E61E29123D00C69D90 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1005E51E29123D00C69D90 /* LocationManager.swift */; };
+		0D1005E81E291A4000C69D90 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1005E71E291A4000C69D90 /* GooglePlacesManager.swift */; };
 		0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */; };
 		0DE2BBF41E2804BD00046FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF21E2804BD00046FB3 /* Main.storyboard */; };
 		0DE2BBF91E2804BD00046FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 		0DE2BC281E28203000046FB3 /* StarbucksStoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC271E28203000046FB3 /* StarbucksStoreInformation.swift */; };
 		0DE2BC2B1E28208700046FB3 /* StarbucksInformationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC291E28208700046FB3 /* StarbucksInformationCellViewModel.swift */; };
 		0DE2BC2C1E28208700046FB3 /* StarbucksInformationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC2A1E28208700046FB3 /* StarbucksInformationCollectionViewCell.swift */; };
+		0DE2BC2E1E282B0500046FB3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC2D1E282B0500046FB3 /* RequestManager.swift */; };
+		0DE2BC301E282B2000046FB3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC2F1E282B2000046FB3 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D1005E51E29123D00C69D90 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Utilities/LocationManager.swift; sourceTree = "<group>"; };
+		0D1005E71E291A4000C69D90 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		0DE2BBEB1E2804BD00046FB3 /* StarbucksLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE2BBF31E2804BD00046FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 		0DE2BC271E28203000046FB3 /* StarbucksStoreInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarbucksStoreInformation.swift; path = Models/StarbucksStoreInformation.swift; sourceTree = "<group>"; };
 		0DE2BC291E28208700046FB3 /* StarbucksInformationCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarbucksInformationCellViewModel.swift; path = Features/Main/StarbucksCollectionViewCell/StarbucksInformationCellViewModel.swift; sourceTree = "<group>"; };
 		0DE2BC2A1E28208700046FB3 /* StarbucksInformationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarbucksInformationCollectionViewCell.swift; path = Features/Main/StarbucksCollectionViewCell/StarbucksInformationCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DE2BC2D1E282B0500046FB3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestManager.swift; path = Networking/RequestManager.swift; sourceTree = "<group>"; };
+		0DE2BC2F1E282B2000046FB3 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,8 @@
 		0DE2BC121E2812CD00046FB3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0DE2BC2D1E282B0500046FB3 /* RequestManager.swift */,
+				0DE2BC2F1E282B2000046FB3 /* Router.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -139,6 +149,8 @@
 		0DE2BC151E2812E600046FB3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0D1005E51E29123D00C69D90 /* LocationManager.swift */,
+				0D1005E71E291A4000C69D90 /* GooglePlacesManager.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -277,12 +289,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE2BC301E282B2000046FB3 /* Router.swift in Sources */,
 				0DE2BC191E2814C000046FB3 /* MainViewController.swift in Sources */,
 				0DE2BC211E28151B00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */,
 				0DE2BC2B1E28208700046FB3 /* StarbucksInformationCellViewModel.swift in Sources */,
+				0D1005E81E291A4000C69D90 /* GooglePlacesManager.swift in Sources */,
 				0DE2BC281E28203000046FB3 /* StarbucksStoreInformation.swift in Sources */,
+				0DE2BC2E1E282B0500046FB3 /* RequestManager.swift in Sources */,
 				0DE2BC2C1E28208700046FB3 /* StarbucksInformationCollectionViewCell.swift in Sources */,
 				0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */,
+				0D1005E61E29123D00C69D90 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +502,7 @@
 				0DE2BC0D1E2804BE00046FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DE2BC0E1E2804BE00046FB3 /* Build configuration list for PBXNativeTarget "StarbucksLocatorTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +511,7 @@
 				0DE2BC101E2804BE00046FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

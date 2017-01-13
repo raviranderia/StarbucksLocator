@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MainViewController: UIViewController {
 
+    let googlePlacesManager = GooglePlacesManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        googlePlacesManager.fetchNearbyStarbucksStores { (starbucksStoreList) in
+            print(starbucksStoreList)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
