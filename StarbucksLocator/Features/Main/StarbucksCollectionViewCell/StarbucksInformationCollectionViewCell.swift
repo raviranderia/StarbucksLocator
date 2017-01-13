@@ -11,14 +11,10 @@ import UIKit
 class StarbucksInformationCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var starbucksImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var priceLevelLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
     func configureCell(starbucksInformationCellViewModel: StarbucksInformationCellViewModel) {
-        self.nameLabel.text = starbucksInformationCellViewModel.name
         self.addressLabel.text = starbucksInformationCellViewModel.address
-        self.priceLevelLabel.text = starbucksInformationCellViewModel.priceLevel
     }
 }
