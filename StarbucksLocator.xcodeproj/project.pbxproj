@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0D1005E61E29123D00C69D90 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1005E51E29123D00C69D90 /* LocationManager.swift */; };
-		0D1005E81E291A4000C69D90 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1005E71E291A4000C69D90 /* GooglePlacesManager.swift */; };
 		0D56989B1E2A79B1009ACB88 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56989A1E2A79B1009ACB88 /* ErrorViewController.swift */; };
 		0D56989C1E2A95A7009ACB88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC181E2814C000046FB3 /* MainViewController.swift */; };
+		0D56989E1E2A9BF9009ACB88 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56989D1E2A9BF9009ACB88 /* GooglePlacesManager.swift */; };
 		0DD556CC1E29272300407098 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556CB1E29272300407098 /* MainViewModel.swift */; };
 		0DD556CE1E293B6100407098 /* UIImageView+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556CD1E293B6100407098 /* UIImageView+Async.swift */; };
 		0DD556D11E2945CB00407098 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556D01E2945CB00407098 /* MapViewController.swift */; };
@@ -20,7 +20,6 @@
 		0DE2BBF91E2804BD00046FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */; };
 		0DE2BBFC1E2804BD00046FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBFA1E2804BD00046FB3 /* LaunchScreen.storyboard */; };
 		0DE2BC071E2804BE00046FB3 /* StarbucksLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC061E2804BE00046FB3 /* StarbucksLocatorTests.swift */; };
-		0DE2BC1D1E2814DB00046FB3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BC1A1E2814DB00046FB3 /* Info.plist */; };
 		0DE2BC211E28151B00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC1F1E28151B00046FB3 /* StarbucksLocator.xcdatamodeld */; };
 		0DE2BC281E28203000046FB3 /* StarbucksStoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC271E28203000046FB3 /* StarbucksStoreInformation.swift */; };
 		0DE2BC2B1E28208700046FB3 /* StarbucksInformationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC291E28208700046FB3 /* StarbucksInformationCellViewModel.swift */; };
@@ -41,8 +40,8 @@
 
 /* Begin PBXFileReference section */
 		0D1005E51E29123D00C69D90 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Utilities/LocationManager.swift; sourceTree = "<group>"; };
-		0D1005E71E291A4000C69D90 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		0D56989A1E2A79B1009ACB88 /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorViewController.swift; path = Features/Error/ErrorViewController.swift; sourceTree = "<group>"; };
+		0D56989D1E2A9BF9009ACB88 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesManager.swift; path = Utilities/GooglePlacesManager.swift; sourceTree = "<group>"; };
 		0DD556CB1E29272300407098 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewModel.swift; path = Features/Main/MainViewModel.swift; sourceTree = "<group>"; };
 		0DD556CD1E293B6100407098 /* UIImageView+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Async.swift"; path = "Extensions/UIImageView+Async.swift"; sourceTree = "<group>"; };
 		0DD556D01E2945CB00407098 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Features/Map/MapViewController.swift; sourceTree = "<group>"; };
@@ -178,8 +177,8 @@
 		0DE2BC151E2812E600046FB3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0D56989D1E2A9BF9009ACB88 /* GooglePlacesManager.swift */,
 				0D1005E51E29123D00C69D90 /* LocationManager.swift */,
-				0D1005E71E291A4000C69D90 /* GooglePlacesManager.swift */,
 				0DD556D21E29639700407098 /* DataManager.swift */,
 			);
 			name = Utilities;
@@ -261,7 +260,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "RAVI RANDERIA";
 				TargetAttributes = {
 					0DE2BBEA1E2804BC00046FB3 = {
@@ -299,7 +298,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE2BC1D1E2814DB00046FB3 /* Info.plist in Resources */,
 				0DE2BBFC1E2804BD00046FB3 /* LaunchScreen.storyboard in Resources */,
 				0DE2BBF91E2804BD00046FB3 /* Assets.xcassets in Resources */,
 				0DE2BBF41E2804BD00046FB3 /* Main.storyboard in Resources */,
@@ -325,11 +323,11 @@
 				0DE2BC211E28151B00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */,
 				0DD556D31E29639700407098 /* DataManager.swift in Sources */,
 				0DE2BC2B1E28208700046FB3 /* StarbucksInformationCellViewModel.swift in Sources */,
-				0D1005E81E291A4000C69D90 /* GooglePlacesManager.swift in Sources */,
 				0DE2BC281E28203000046FB3 /* StarbucksStoreInformation.swift in Sources */,
 				0D56989B1E2A79B1009ACB88 /* ErrorViewController.swift in Sources */,
 				0DD556D11E2945CB00407098 /* MapViewController.swift in Sources */,
 				0DE2BC2E1E282B0500046FB3 /* RequestManager.swift in Sources */,
+				0D56989E1E2A9BF9009ACB88 /* GooglePlacesManager.swift in Sources */,
 				0DE2BC2C1E28208700046FB3 /* StarbucksInformationCollectionViewCell.swift in Sources */,
 				0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */,
 				0D1005E61E29123D00C69D90 /* LocationManager.swift in Sources */,
@@ -394,6 +392,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -443,6 +442,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
