@@ -11,9 +11,9 @@ import Foundation
 import UIKit
 import CoreData
 
-class DataManager {
+class CoreDataManager {
     
-    static let shared = DataManager()
+    static let shared = CoreDataManager()
     private init() { }
     
     func saveStarbucksStoreInfo(starbucksStore: StarbucksStoreInformation) {
@@ -107,7 +107,7 @@ class DataManager {
         }
     }
     
-    func fetchStoreData(completion: (Result<[StarbucksStoreInformation]>) -> ()) {
+    func fetchStoredData(completion: (Result<[StarbucksStoreInformation]>) -> ()) {
         let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"StarbucksStore")
         var resultsDummy = [NSManagedObject]()

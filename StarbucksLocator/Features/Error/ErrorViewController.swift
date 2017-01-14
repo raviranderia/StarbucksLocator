@@ -15,7 +15,7 @@ enum FeedError: Error {
 }
 
 protocol ErrorViewControllerDelegate: class {
-    func errorResolved(error: FeedError)
+    func resolve(error: FeedError)
 }
 
 class ErrorViewController: UIViewController, CLLocationManagerDelegate {
@@ -44,13 +44,13 @@ class ErrorViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             dismiss(animated: true, completion: { 
-                self.delegate?.errorResolved(error: .LocationServicesDisabled)
+                self.delegate?.resolve(error: .LocationServicesDisabled)
             })
         }
     }
     
     @IBAction func refreshButtonPressed(_ sender: UIButton) {
-        delegate?.errorResolved(error: .InvalidData)
+        delegate?.resolve(error: .InvalidData)
     }
     
 }

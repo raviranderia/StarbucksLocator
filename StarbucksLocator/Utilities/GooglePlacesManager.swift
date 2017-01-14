@@ -16,7 +16,7 @@ protocol GooglePlacesManagerDelegate: class {
 class GooglePlacesManager {
     private let requestManager = RequestManager.shared
     private let locationManager = LocationManager.shared
-    private let dataManager = DataManager.shared
+    private let dataManager = CoreDataManager.shared
     private let defaultRadius = 100
 
     static let shared = GooglePlacesManager()
@@ -28,26 +28,25 @@ class GooglePlacesManager {
         locationManager.getCurrentLocation { (locationResult) in
             switch locationResult {
             case .success(let location):
-                requestManager.fetchNearbyStarbucksStores(location: location, radius: defaultRadius, completion: { (result) in
+                requestManager.fetchNearbyStarbucksStores(location: location, radius: defaultRadius) { (result) in
                     switch result {
                     case .success(let responseDictionary):
-                        self.mapDictionaryToStarbucksModelArray(responseDictionary: responseDictionary, completion: { (starbucksStoreList) in
+                        self.mapDictionaryToStarbucksModelArray(responseDictionary: responseDictionary) { (starbucksStoreList) in
                             DispatchQueue.main.async {
                                 self.delegate?.fetchedNewStores(sender: self)
                             }
-                        })
+                        }
                     case .failure(let error):
                         print(error)
                     }
-                    
-                })
+                }
             case .failure(let error):
                 print(error)
             }
         }
     }
     
-    private func mapDictionaryToStarbucksModelArray(responseDictionary: [String: Any], completion: (Result<[StarbucksStoreInformation]>) -> ()) {
+    private func mapDictionaryToStarbucksModelArray(responseDictionary: [String: Any], completion: @escaping (Result<[StarbucksStoreInformation]>) -> ()) {
         if let results = responseDictionary["results"] as? [[String: Any]] {
             dataManager.removeStoredData() { (result) in
                 switch result {

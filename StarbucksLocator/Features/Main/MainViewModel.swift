@@ -23,11 +23,10 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
     let errorSegueIdentifier = "errorViewControllerSegue"
     let collectionViewCellIdentifier = "Cell"
     private var locationManager = LocationManager.shared
-    var starbucksStore = [StarbucksStoreInformation]()
     
     weak var delegate: MainViewModelDelegate?
     
-    private weak var dataManager = DataManager.shared
+    private weak var dataManager = CoreDataManager.shared
     private var googlePlacesManager = GooglePlacesManager.shared
     
     override init() {
@@ -36,20 +35,19 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
         locationManager.locationManager.delegate = self
     }
     
-    func fetchNearbyStarbucksStores(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ())  {
-        DispatchQueue.global().async {
-            self.dataManager?.fetchStoreData() { (result) in
-                DispatchQueue.main.async {
-                    completion(result)
-                }
-            }
+    // fetch stored data from coreData
+    func fetchStoredData(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ())  {
+        self.dataManager?.fetchStoredData() { (result) in
+            completion(result)
         }
     }
     
+    //fetch fresh data from google places API
     func fetchFreshData() {
         googlePlacesManager.fetchNearbyStarbucksStores()
     }
     
+    // MARK: GooglePlacesManagerDelegate
     func fetchedNewStores(sender: Any?) {
         if let mainViewController = delegate as? MainViewController {
             if mainViewController.presentedViewController is ErrorViewController {
@@ -75,7 +73,8 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
     }
     
     // MARK: ErrorViewControllerDelegate
-    func errorResolved(error: FeedError) {
+    // fetch data from coreData and also send a network request
+    func resolve(error: FeedError) {
         reloadCollectionView {
             self.fetchFreshData()
             switch error {
@@ -89,8 +88,9 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
         }
     }
     
+    // fetches stored data and dismisses errorViewController if it is the presentedViewController and if there is data to display
     func reloadCollectionView(completion: @escaping () -> ()) {
-        fetchNearbyStarbucksStores { (result) in
+        fetchStoredData { (result) in
             switch result {
             case .success(let starbucksStoreInformation):
                 self.starbucksStoreInformation = starbucksStoreInformation
@@ -98,9 +98,9 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
                     self.delegate?.reloadCollectionViewData()
                 } else {
                     guard let mainViewController = self.delegate as? MainViewController,
-                    !(mainViewController.presentedViewController is ErrorViewController) else {
-                        completion()
-                        return
+                        !(mainViewController.presentedViewController is ErrorViewController) else {
+                            completion()
+                            return
                     }
                     self.delegate?.performSegueWithIdentifier(identifier: self.errorSegueIdentifier, error: FeedError.InvalidData)
                 }

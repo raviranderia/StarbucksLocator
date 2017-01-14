@@ -12,7 +12,7 @@ import UIKit
 extension UIImageView {
     
     func getImageFrom(photoReference: String,andId id: String, starbucksStoreInformation: StarbucksStoreInformation) {
-        let dataManager = DataManager.shared
+        let dataManager = CoreDataManager.shared
         let maxWidth = UIScreen.main.bounds.width
         RequestManager.shared.getImageFromURL(photoReference: photoReference, maxWidth: maxWidth, completion: { (result) in
             switch result {
