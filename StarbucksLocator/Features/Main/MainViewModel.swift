@@ -14,7 +14,8 @@ protocol MainViewModelDelegate: class {
 }
 
 class MainViewModel: GooglePlacesManagerDelegate {
-    let segueIdentifer = "showStarbucksOnMap"
+    let mapSegueIdentifer = "showStarbucksOnMap"
+    let errorSegueIdentifier = "errorViewControllerSegue"
     let collectionViewCellIdentifier = "Cell"
     var starbucksStore = [StarbucksStoreInformation]()
     

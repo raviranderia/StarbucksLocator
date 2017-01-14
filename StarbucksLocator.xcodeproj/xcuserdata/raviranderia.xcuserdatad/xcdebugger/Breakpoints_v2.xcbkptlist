@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarbucksLocator/Features/Main/MainViewController.swift"
-            timestampString = "506101158.140708"
+            timestampString = "506111549.838336"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138">
+            startingLineNumber = "152"
+            endingLineNumber = "152">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -72,59 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarbucksLocator/Features/Main/MainViewController.swift"
-            timestampString = "506101158.140708"
+            timestampString = "506111549.838336"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StarbucksLocator/Features/Main/MainViewModel.swift"
-            timestampString = "506099212.18957"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "fetchedNewStores(sender:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "StarbucksLocator.MainViewModel.fetchedNewStores (sender : Swift.Optional&lt;Any&gt;) -&gt; ()"
-                  moduleName = "StarbucksLocator"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raviranderia/Desktop/InterviewPrep/StarbucksLocator/StarbucksLocator/Features/Main/MainViewModel.swift"
-                  timestampString = "506100866.6049"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "StarbucksLocator.MainViewModel.(fetchedNewStores (sender : Swift.Optional&lt;Any&gt;) -&gt; ()).(closure #1)"
-                  moduleName = "StarbucksLocator"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raviranderia/Desktop/InterviewPrep/StarbucksLocator/StarbucksLocator/Features/Main/MainViewModel.swift"
-                  timestampString = "506100866.608274"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
+            startingLineNumber = "143"
+            endingLineNumber = "143">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -130,17 +130,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mC-GY-zen">
+                                <rect key="frame" x="161" y="352" width="53" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" destination="Pr9-DV-kjs" eventType="touchUpInside" id="RvR-zd-5j6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="edl-XT-O3n" secondAttribute="trailing" constant="8" id="4eI-K8-dtE"/>
                             <constraint firstItem="edl-XT-O3n" firstAttribute="centerX" secondItem="kv2-EB-ZMI" secondAttribute="centerX" id="GRU-bC-Gnh"/>
+                            <constraint firstItem="0mC-GY-zen" firstAttribute="centerX" secondItem="kv2-EB-ZMI" secondAttribute="centerX" id="HTd-VL-ty8"/>
                             <constraint firstItem="edl-XT-O3n" firstAttribute="centerY" secondItem="kv2-EB-ZMI" secondAttribute="centerY" id="IZM-8m-xG8"/>
+                            <constraint firstItem="0mC-GY-zen" firstAttribute="top" secondItem="edl-XT-O3n" secondAttribute="bottom" constant="8" id="lon-Mu-FuW"/>
                             <constraint firstItem="edl-XT-O3n" firstAttribute="leading" secondItem="kv2-EB-ZMI" secondAttribute="leadingMargin" constant="8" id="ttE-PI-tR1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="errorLabel" destination="edl-XT-O3n" id="H48-Dw-b3u"/>
+                        <outlet property="refreshButton" destination="0mC-GY-zen" id="nU0-St-eQC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Nh-nE-OTu" userLabel="First Responder" sceneMemberID="firstResponder"/>

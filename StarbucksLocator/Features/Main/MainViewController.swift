@@ -35,7 +35,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: mainViewModel.segueIdentifer, sender: starbucksStoreInformation[indexPath.row])
+        performSegue(withIdentifier: mainViewModel.mapSegueIdentifer, sender: starbucksStoreInformation[indexPath.row])
     }
     
     private func displayError(message: String) {
@@ -52,8 +52,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let selectedStore = sender as? StarbucksStoreInformation{
             destinationVC.currentStarbucksStoreInfo = selectedStore
         } else if let destinationVC = segue.destination as? ErrorViewController,
-            let errorMessage = sender as? String {
-            destinationVC.errorMessage = errorMessage
+            let feedError = sender as? FeedError {
+            destinationVC.feedError = feedError
             destinationVC.delegate = self
         }
     }
@@ -69,7 +69,12 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             switch result {
             case .success(let starbucksStoreInformation):
                 self.starbucksStoreInformation = starbucksStoreInformation
-                self.starbucksCollectionView.reloadData()
+                if starbucksStoreInformation.count > 0 {
+                    self.starbucksCollectionView.reloadData()
+                } else {
+                    guard !(self.presentedViewController is ErrorViewController) else { return }
+                    self.performSegue(withIdentifier: self.mainViewModel.errorSegueIdentifier, sender: FeedError.InvalidData)
+                }
             case .failure(let error):
                 self.displayError(message: error.localizedDescription)
             }
@@ -82,14 +87,23 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         case .authorizedWhenInUse:
             firstLaunch()
         case .denied:
-            self.performSegue(withIdentifier: "errorViewControllerSegue", sender: "Please go to settings to enable location services")
+            self.performSegue(withIdentifier: mainViewModel.errorSegueIdentifier, sender: FeedError.LocationServicesDisabled)
         default:
             break
         }
     }
     
-    func errorResolved() {
+    func errorResolved(error: FeedError) {
         firstLaunch()
+        switch error {
+        case .InvalidData:
+            if starbucksStoreInformation.count > 0 {
+                dismiss(animated: true, completion: nil)
+            }
+        default:
+            break
+        }
     }
+    
 }
 

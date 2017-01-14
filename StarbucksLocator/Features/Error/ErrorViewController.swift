@@ -9,13 +9,19 @@
 import UIKit
 import CoreLocation
 
+enum FeedError: Error {
+    case LocationServicesDisabled
+    case InvalidData
+}
+
 protocol ErrorViewControllerDelegate: class {
-    func errorResolved()
+    func errorResolved(error: FeedError)
 }
 
 class ErrorViewController: UIViewController, CLLocationManagerDelegate {
+    @IBOutlet weak var refreshButton: UIButton!
     
-    var errorMessage: String?
+    var feedError: FeedError?
     let locationManager = LocationManager.shared
     weak var delegate: ErrorViewControllerDelegate?
 
@@ -24,16 +30,27 @@ class ErrorViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.locationManager.delegate = self
-        if let errorMessage = errorMessage {
-            errorLabel.text = errorMessage
+        if let feedError = feedError {
+            switch feedError {
+            case .LocationServicesDisabled:
+                errorLabel.text = "Please go to settings to enable location services"
+            case .InvalidData:
+                errorLabel.text = "No data to display, try again later"
+                refreshButton.isHidden = false
+            }
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             dismiss(animated: true, completion: { 
-                self.delegate?.errorResolved()
+                self.delegate?.errorResolved(error: .LocationServicesDisabled)
             })
         }
     }
+    
+    @IBAction func refreshButtonPressed(_ sender: UIButton) {
+        delegate?.errorResolved(error: .InvalidData)
+    }
+    
 }
