@@ -125,6 +125,7 @@
 		0DE2BBED1E2804BD00046FB3 /* StarbucksLocator */ = {
 			isa = PBXGroup;
 			children = (
+				0DE2BC1F1E28151B00046FB3 /* StarbucksLocator.xcdatamodeld */,
 				0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */,
 				0DE2BC111E2812C100046FB3 /* Features */,
 				0DE2BC151E2812E600046FB3 /* Utilities */,
@@ -195,7 +196,6 @@
 		0DE2BC161E2812F900046FB3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0DE2BC1F1E28151B00046FB3 /* StarbucksLocator.xcdatamodeld */,
 				0DE2BC1A1E2814DB00046FB3 /* Info.plist */,
 				0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */,
 				0DE2BBFA1E2804BD00046FB3 /* LaunchScreen.storyboard */,
@@ -337,7 +337,6 @@
 				0D56989B1E2A79B1009ACB88 /* ErrorViewController.swift in Sources */,
 				0DD556D11E2945CB00407098 /* MapViewController.swift in Sources */,
 				0DE2BC2E1E282B0500046FB3 /* RequestManager.swift in Sources */,
-				0D56989E1E2A9BF9009ACB88 /* GooglePlacesManager.swift in Sources */,
 				0DE2BC2C1E28208700046FB3 /* StarbucksInformationCollectionViewCell.swift in Sources */,
 				0D6637911E2A6F54000C36F4 /* GooglePlacesManager.swift in Sources */,
 				0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */,
