@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import CoreData
 import UIKit
 
 class StarbucksStoreInformation {
@@ -16,13 +17,11 @@ class StarbucksStoreInformation {
     var formattedAddress: String?
     var location: CLLocation?
     var name: String?
-    var openNow: Bool?
-    var priceLevel: Int?
     var photoReference: String?
     var id: String?
     
-    var starbucksStoreImage: UIImage?
-    
+    var starbucksImage: UIImage?
+        
     init(starbucksJSON: [String: Any]) {
         if let formattedAddress = starbucksJSON["formatted_address"] as? String {
             self.formattedAddress = formattedAddress
@@ -30,15 +29,6 @@ class StarbucksStoreInformation {
         
         if let name = starbucksJSON["name"] as? String {
             self.name = name
-        }
-        
-        if let openingHours = starbucksJSON["opening_hours"] as? [String: Any],
-            let openNow = openingHours["open_now"] as? Bool {
-            self.openNow = openNow
-        }
-        
-        if let priceLevel = starbucksJSON["price_level"] as? Int {
-            self.priceLevel = priceLevel
         }
         
         if let photos = starbucksJSON["photos"] as? [[String: Any]],
@@ -56,10 +46,42 @@ class StarbucksStoreInformation {
             let longitude = location["lng"] as? Double,
             let latitudeDegrees = CLLocationDegrees(exactly: latitude),
             let longitudeDegrees = CLLocationDegrees(exactly: longitude) {
-                self.location = CLLocation(latitude: latitudeDegrees, longitude: longitudeDegrees)
-            } else {
-                self.location = nil
-            }
+            self.location = CLLocation(latitude: latitudeDegrees, longitude: longitudeDegrees)
+        } else {
+            self.location = nil
         }
+    }
+    
+    init(managedObject: NSManagedObject) {
+        if let formattedAddress = managedObject.value(forKey: "formattedAddress") as? String {
+            self.formattedAddress = formattedAddress
+        }
+        
+        if let photoReference = managedObject.value(forKey: "photoReference") as? String {
+            self.photoReference = photoReference
+        }
+        
+        if let name = managedObject.value(forKey: "name") as? String {
+            self.name = name
+        }
+        
+        if let imageData = managedObject.value(forKey: "photo") as? Data,
+            let image = UIImage(data: imageData) {
+            self.starbucksImage = image
+        }
+        
+        if let id = managedObject.value(forKey: "id") as? String {
+            self.id = id
+        }
+        
+        if let latitude = managedObject.value(forKey: "latitude") as? Double,
+            let longitude = managedObject.value(forKey: "longitude") as? Double,
+            let latitudeDegrees = CLLocationDegrees(exactly: latitude),
+            let longitudeDegrees = CLLocationDegrees(exactly: longitude) {
+            self.location = CLLocation(latitude: latitudeDegrees, longitude: longitudeDegrees)
+        } else {
+            self.location = nil
+        }
+    }
 }
 

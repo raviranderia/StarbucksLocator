@@ -9,25 +9,17 @@
 import UIKit
 import CoreLocation
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MainViewModelDelegate {
     
     @IBOutlet weak var starbucksCollectionView: UICollectionView!
 
-    let mainViewModel = MainViewModel()
+    var mainViewModel = MainViewModel()
     var starbucksStoreInformation = [StarbucksStoreInformation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainViewModel.fetchNearbyStarbucksStores { [weak self] (result) in
-            guard let strongSelf = self else { return }
-            switch result {
-            case .success(let starbucksStoreInformation):
-                strongSelf.starbucksStoreInformation = starbucksStoreInformation
-                strongSelf.starbucksCollectionView.reloadData()
-            case .failure(let error):
-                strongSelf.displayError(message: error.localizedDescription)
-            }
-        }
+        mainViewModel.delegate = self
+        firstLaunch()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,6 +50,25 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if let destinationVC = segue.destination as? MapViewController,
             let selectedStore = sender as? StarbucksStoreInformation{
             destinationVC.currentStarbucksStoreInfo = selectedStore
+        }
+    }
+    
+    func firstLaunch() {
+        reloadCollectionView {
+            self.mainViewModel.fetchFreshData()
+        }
+    }
+    
+    func reloadCollectionView(completion: @escaping () -> ()) {
+        mainViewModel.fetchNearbyStarbucksStores { (result) in
+            switch result {
+            case .success(let starbucksStoreInformation):
+                self.starbucksStoreInformation = starbucksStoreInformation
+                self.starbucksCollectionView.reloadData()
+            case .failure(let error):
+                self.displayError(message: error.localizedDescription)
+            }
+            completion()
         }
     }
 }

@@ -9,23 +9,39 @@
 import Foundation
 import CoreData
 
-struct MainViewModel {
+protocol MainViewModelDelegate: class {
+    func reloadCollectionView(completion: @escaping () -> ())
+}
+
+class MainViewModel: GooglePlacesManagerDelegate {
     let segueIdentifer = "showStarbucksOnMap"
     let collectionViewCellIdentifier = "Cell"
+    var starbucksStore = [StarbucksStoreInformation]()
     
-    var starbucksStore = [NSManagedObject]()
+    weak var delegate: MainViewModelDelegate?
     
-    private let googlePlacesManager = GooglePlacesManager.shared
-
-    func fetchNearbyStarbucksStores(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ()) {
+    private weak var dataManager = DataManager.shared
+    private var googlePlacesManager = GooglePlacesManager.shared {
+        didSet {
+            googlePlacesManager.delegate = self
+        }
+    }
+    
+    func fetchNearbyStarbucksStores(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ())  {
         DispatchQueue.global().async {
-            self.googlePlacesManager.fetchNearbyStarbucksStores { (starbucksStoreList) in
+            self.dataManager?.fetchStoreData() { (result) in
                 DispatchQueue.main.async {
-                    print(starbucksStoreList)
-                    completion(starbucksStoreList)
+                    completion(result)
                 }
             }
         }
-       
+    }
+    
+    func fetchFreshData() {
+        googlePlacesManager.fetchNearbyStarbucksStores()
+    }
+    
+    func fetchedNewStores(sender: Any?) {
+        delegate?.reloadCollectionView { }
     }
 }

@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
-struct GooglePlacesManager {
+protocol GooglePlacesManagerDelegate: class {
+    func fetchedNewStores(sender: Any?)
+}
+
+class GooglePlacesManager {
     private let requestManager = RequestManager.shared
     private let locationManager = LocationManager.shared
     private let defaultRadius = 100
@@ -17,7 +22,9 @@ struct GooglePlacesManager {
     static let shared = GooglePlacesManager()
     private init() {}
     
-    func fetchNearbyStarbucksStores(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ()) {
+    weak var delegate: GooglePlacesManagerDelegate?
+    
+    func fetchNearbyStarbucksStores() {
         locationManager.getCurrentLocation { (locationResult) in
             switch locationResult {
             case .success(let location):
@@ -25,28 +32,35 @@ struct GooglePlacesManager {
                     switch result {
                     case .success(let responseDictionary):
                         self.mapDictionaryToStarbucksModelArray(responseDictionary: responseDictionary, completion: { (starbucksStoreList) in
-                            completion(starbucksStoreList)
+                            DispatchQueue.main.async {
+                                self.delegate?.fetchedNewStores(sender: self)
+                            }
                         })
                     case .failure(let error):
-                        completion(.failure(error))
+                        print(error)
                     }
                     
                 })
             case .failure(let error):
-                completion(.failure(error))
+                print(error)
             }
         }
     }
     
     private func mapDictionaryToStarbucksModelArray(responseDictionary: [String: Any], completion: (Result<[StarbucksStoreInformation]>) -> ()) {
-        var starbucksStoreList = [StarbucksStoreInformation]()
         if let results = responseDictionary["results"] as? [[String: Any]] {
-            for storeInformation in results {
-                let starbucksInformation = StarbucksStoreInformation(starbucksJSON: storeInformation)
-                starbucksStoreList.append(starbucksInformation)
-                dataManager.saveStarbucksStoreInfo(starbucksStore: starbucksInformation)
+            dataManager.removeStoredData() { (result) in
+                switch result {
+                case .success(_):
+                    completion(.success(results.map(){ (storeJSON) -> StarbucksStoreInformation in
+                        let starbucksStore = StarbucksStoreInformation(starbucksJSON: storeJSON)
+                        dataManager.saveStarbucksStoreInfo(starbucksStore: starbucksStore)
+                        return starbucksStore
+                    }))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
-            completion(.success(starbucksStoreList))
         } else {
             completion(.failure(NetworkOperationError.errorJSON))
         }

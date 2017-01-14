@@ -39,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="324"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Starbucks_logos-9" translatesAutoresizingMaskIntoConstraints="NO" id="MiS-zV-l14">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiS-zV-l14">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="238.5"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-qimg-42a047420a707f34a6c6bf703766e528-c" translatesAutoresizingMaskIntoConstraints="NO" id="pJt-4H-ng8">
@@ -166,7 +166,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Starbucks_logos-9" width="1680" height="1050"/>
         <image name="main-qimg-42a047420a707f34a6c6bf703766e528-c" width="572" height="582"/>
     </resources>
 </document>

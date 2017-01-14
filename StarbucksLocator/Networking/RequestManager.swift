@@ -32,11 +32,12 @@ struct RequestManager {
         let method = Router.getNearbyStarbucks(location, radius)
         let session = URLSession.shared
         let dataTask = session.dataTask(with: method.asURLRequest()) { (data, response, error) in
-            if let httpResponse = response as? HTTPURLResponse {
+            if let httpResponse = response as? HTTPURLResponse,
+                let data = data {
                 switch(httpResponse.statusCode) {
                 case 200:
                     do {
-                        let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+                        let jsonDictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
                         completion(.success(jsonDictionary as! [String: Any]))
                     } catch {
                         completion(.failure(NetworkOperationError.errorJSON))

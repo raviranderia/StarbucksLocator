@@ -11,13 +11,20 @@ import UIKit
 
 struct StarbucksInformationCellViewModel {
     
-//    var starbucksImage: UIImage
-//    var nameLabel: String
-//    var addressLabel: String
-//    var priceLevelLabel: String
-//    var iconImageView: UIImage
-//    
-//    init(starbucksStoreInformation: StarbucksStoreInformation) {
-//        
-//    }
+    var name: String?
+    var address: String?
+    var photoReference: String?
+    var starbucksStoreImage: UIImage?
+    var id: String?
+    
+    var starbucksStoreInformation: StarbucksStoreInformation
+    
+    init(starbucksStoreInformation: StarbucksStoreInformation) {
+        self.name = starbucksStoreInformation.name
+        self.address = starbucksStoreInformation.formattedAddress
+        self.photoReference = starbucksStoreInformation.photoReference
+        self.starbucksStoreImage = starbucksStoreInformation.starbucksImage
+        self.id = starbucksStoreInformation.id
+        self.starbucksStoreInformation = starbucksStoreInformation
+    }
 }

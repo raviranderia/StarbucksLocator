@@ -7,8 +7,9 @@
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="photoReference" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="StarbucksStore" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="StarbucksStore" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>
