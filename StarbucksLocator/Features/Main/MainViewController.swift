@@ -52,7 +52,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let selectedStore = sender as? StarbucksStoreInformation{
             destinationVC.currentStarbucksStoreInfo = selectedStore
         } else if let destinationVC = segue.destination as? ErrorViewController,
-            let errorMessage = sender as? String{
+            let errorMessage = sender as? String {
             destinationVC.errorMessage = errorMessage
             destinationVC.delegate = self
         }
