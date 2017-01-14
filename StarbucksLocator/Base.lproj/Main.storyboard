@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SI1-PO-TbL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SI1-PO-TbL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -105,11 +105,47 @@
                     <connections>
                         <outlet property="starbucksCollectionView" destination="nCm-J5-uN9" id="dRB-QY-smz"/>
                         <segue destination="Lgy-sx-VQF" kind="show" identifier="showStarbucksOnMap" id="rlg-3F-pta"/>
+                        <segue destination="Pr9-DV-kjs" kind="presentation" identifier="errorViewControllerSegue" id="lqR-8X-ylv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Error View Controller-->
+        <scene sceneID="stX-YL-FMJ">
+            <objects>
+                <viewController id="Pr9-DV-kjs" customClass="ErrorViewController" customModule="StarbucksLocator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nib-kN-TJb"/>
+                        <viewControllerLayoutGuide type="bottom" id="0VS-Qa-scG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kv2-EB-ZMI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edl-XT-O3n">
+                                <rect key="frame" x="24" y="323" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="edl-XT-O3n" secondAttribute="trailing" constant="8" id="4eI-K8-dtE"/>
+                            <constraint firstItem="edl-XT-O3n" firstAttribute="centerX" secondItem="kv2-EB-ZMI" secondAttribute="centerX" id="GRU-bC-Gnh"/>
+                            <constraint firstItem="edl-XT-O3n" firstAttribute="centerY" secondItem="kv2-EB-ZMI" secondAttribute="centerY" id="IZM-8m-xG8"/>
+                            <constraint firstItem="edl-XT-O3n" firstAttribute="leading" secondItem="kv2-EB-ZMI" secondAttribute="leadingMargin" constant="8" id="ttE-PI-tR1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="edl-XT-O3n" id="H48-Dw-b3u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Nh-nE-OTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="812"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ItI-tm-Tea">

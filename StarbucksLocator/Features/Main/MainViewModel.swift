@@ -21,10 +21,10 @@ class MainViewModel: GooglePlacesManagerDelegate {
     weak var delegate: MainViewModelDelegate?
     
     private weak var dataManager = DataManager.shared
-    private var googlePlacesManager = GooglePlacesManager.shared {
-        didSet {
-            googlePlacesManager.delegate = self
-        }
+    private var googlePlacesManager = GooglePlacesManager.shared
+    
+    init() {
+        googlePlacesManager.delegate = self
     }
     
     func fetchNearbyStarbucksStores(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ())  {

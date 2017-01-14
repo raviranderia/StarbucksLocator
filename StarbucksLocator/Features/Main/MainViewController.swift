@@ -9,17 +9,18 @@
 import UIKit
 import CoreLocation
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MainViewModelDelegate {
+class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MainViewModelDelegate, CLLocationManagerDelegate, ErrorViewControllerDelegate {
     
     @IBOutlet weak var starbucksCollectionView: UICollectionView!
 
     var mainViewModel = MainViewModel()
     var starbucksStoreInformation = [StarbucksStoreInformation]()
+    let locationManager = LocationManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mainViewModel.delegate = self
-        firstLaunch()
+        locationManager.locationManager.delegate = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -50,6 +51,10 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if let destinationVC = segue.destination as? MapViewController,
             let selectedStore = sender as? StarbucksStoreInformation{
             destinationVC.currentStarbucksStoreInfo = selectedStore
+        } else if let destinationVC = segue.destination as? ErrorViewController,
+            let errorMessage = sender as? String{
+            destinationVC.errorMessage = errorMessage
+            destinationVC.delegate = self
         }
     }
     
@@ -70,6 +75,21 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
             completion()
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse:
+            firstLaunch()
+        case .denied:
+            self.performSegue(withIdentifier: "errorViewControllerSegue", sender: "Please go to settings to enable location services")
+        default:
+            break
+        }
+    }
+    
+    func errorResolved() {
+        firstLaunch()
     }
 }
 

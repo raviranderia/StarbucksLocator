@@ -21,10 +21,11 @@ enum LocationError : Error {
 struct LocationManager : LocationManagerProtocol {
     
     static let shared = LocationManager()
-    private init() {}
+    private init() {
+        requestForLocationServices()
+    }
     
-    private var locationManager = CLLocationManager()
-    private var reverseGeoCoder = CLGeocoder()
+    var locationManager = CLLocationManager()
     
     private func requestForLocationServices(){
         locationManager.requestWhenInUseAuthorization()
