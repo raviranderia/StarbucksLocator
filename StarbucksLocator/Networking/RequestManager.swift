@@ -25,7 +25,6 @@ enum NetworkOperationError: Error {
 struct RequestManager {
     
     static let shared = RequestManager()
-    
     private init() { }
     
     func fetchNearbyStarbucksStores(location: CLLocation, radius: Int, completion: @escaping (Result<[String:Any]>) -> ()) {

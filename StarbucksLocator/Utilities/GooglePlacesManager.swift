@@ -16,9 +16,9 @@ protocol GooglePlacesManagerDelegate: class {
 class GooglePlacesManager {
     private let requestManager = RequestManager.shared
     private let locationManager = LocationManager.shared
-    private let defaultRadius = 100
     private let dataManager = DataManager.shared
-    
+    private let defaultRadius = 100
+
     static let shared = GooglePlacesManager()
     private init() {}
     

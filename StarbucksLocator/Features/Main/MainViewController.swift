@@ -9,44 +9,48 @@
 import UIKit
 import CoreLocation
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MainViewModelDelegate, CLLocationManagerDelegate, ErrorViewControllerDelegate {
+final class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MainViewModelDelegate {
     
     @IBOutlet weak var starbucksCollectionView: UICollectionView!
 
-    var mainViewModel = MainViewModel()
-    var starbucksStoreInformation = [StarbucksStoreInformation]()
-    let locationManager = LocationManager.shared
+    private var mainViewModel = MainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mainViewModel.delegate = self
-        locationManager.locationManager.delegate = self
     }
     
+    // MARK: CollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return starbucksStoreInformation.count
+        return mainViewModel.starbucksStoreInformation.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mainViewModel.collectionViewCellIdentifier, for: indexPath) as! StarbucksInformationCollectionViewCell
-        let starbucksCollectionCellViewModel = StarbucksInformationCellViewModel(starbucksStoreInformation: starbucksStoreInformation[indexPath.row])
+        let starbucksCollectionCellViewModel = StarbucksInformationCellViewModel(starbucksStoreInformation: mainViewModel.starbucksStoreInformation[indexPath.row])
         cell.configureCell(starbucksInformationCellViewModel: starbucksCollectionCellViewModel)
         return cell
     }
     
+    // MARK: CollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: mainViewModel.mapSegueIdentifer, sender: starbucksStoreInformation[indexPath.row])
+        performSegue(withIdentifier: mainViewModel.mapSegueIdentifer, sender: mainViewModel.starbucksStoreInformation[indexPath.row])
     }
     
-    private func displayError(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        
-        alertController.addAction(alertAction)
-        
-        self.present(alertController, animated: true, completion: nil)
+    // MARK: MainViewModelDelegate
+    func reloadCollectionViewData() {
+        self.starbucksCollectionView.reloadData()
+    }
+
+    func performSegueWithIdentifier(identifier: String, error: FeedError?) {
+        performSegue(withIdentifier: identifier, sender: error)
     }
     
+    func dismissViewController() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? MapViewController,
             let selectedStore = sender as? StarbucksStoreInformation{
@@ -54,56 +58,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         } else if let destinationVC = segue.destination as? ErrorViewController,
             let feedError = sender as? FeedError {
             destinationVC.feedError = feedError
-            destinationVC.delegate = self
+            destinationVC.delegate = mainViewModel
         }
     }
-    
-    func firstLaunch() {
-        reloadCollectionView {
-            self.mainViewModel.fetchFreshData()
-        }
-    }
-    
-    func reloadCollectionView(completion: @escaping () -> ()) {
-        mainViewModel.fetchNearbyStarbucksStores { (result) in
-            switch result {
-            case .success(let starbucksStoreInformation):
-                self.starbucksStoreInformation = starbucksStoreInformation
-                if starbucksStoreInformation.count > 0 {
-                    self.starbucksCollectionView.reloadData()
-                } else {
-                    guard !(self.presentedViewController is ErrorViewController) else { return }
-                    self.performSegue(withIdentifier: self.mainViewModel.errorSegueIdentifier, sender: FeedError.InvalidData)
-                }
-            case .failure(let error):
-                self.displayError(message: error.localizedDescription)
-            }
-            completion()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .authorizedWhenInUse:
-            firstLaunch()
-        case .denied:
-            self.performSegue(withIdentifier: mainViewModel.errorSegueIdentifier, sender: FeedError.LocationServicesDisabled)
-        default:
-            break
-        }
-    }
-    
-    func errorResolved(error: FeedError) {
-        firstLaunch()
-        switch error {
-        case .InvalidData:
-            if starbucksStoreInformation.count > 0 {
-                dismiss(animated: true, completion: nil)
-            }
-        default:
-            break
-        }
-    }
-    
+
 }
 
