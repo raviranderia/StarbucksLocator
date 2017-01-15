@@ -16,7 +16,7 @@ protocol MainViewModelDelegate: class {
     func dismissViewController()
 }
 
-class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDelegate, ErrorViewControllerDelegate {
+class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDelegate, ErrorViewControllerDelegate, FetchOperationDelegate {
     
     var starbucksStoreInformation = [StarbucksStoreInformation]()
     let mapSegueIdentifer = "showStarbucksOnMap"
@@ -36,10 +36,8 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
     }
     
     // fetch stored data from coreData
-    func fetchStoredData(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ())  {
-        self.dataManager?.fetchStoredData() { (result) in
-            completion(result)
-        }
+    func fetchStoredData() {
+        self.dataManager?.fetchStoredData(delegate: self)
     }
     
     //fetch fresh data from google places API
@@ -49,9 +47,10 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
     
     // MARK: GooglePlacesManagerDelegate
     func fetchedNewStores(sender: Any?) {
+        reloadCollectionView()
         if let mainViewController = delegate as? MainViewController {
             if mainViewController.presentedViewController is ErrorViewController {
-                reloadCollectionView {
+                DispatchQueue.main.async {
                     mainViewController.dismissViewController()
                 }
             }
@@ -62,9 +61,8 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedWhenInUse:
-            reloadCollectionView {
-                self.fetchFreshData()
-            }
+            reloadCollectionView()
+            fetchFreshData()
         case .denied:
             delegate?.performSegueWithIdentifier(identifier: errorSegueIdentifier, error: FeedError.LocationServicesDisabled)
         default:
@@ -75,22 +73,25 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
     // MARK: ErrorViewControllerDelegate
     // fetch data from coreData and also send a network request
     func resolve(error: FeedError) {
-        reloadCollectionView {
-            self.fetchFreshData()
-            switch error {
-            case .InvalidData:
-                if self.starbucksStoreInformation.count > 0 {
-                    self.delegate?.dismissViewController()
-                }
-            default:
-                break
+        reloadCollectionView()
+        self.fetchFreshData()
+        switch error {
+        case .InvalidData:
+            if self.starbucksStoreInformation.count > 0 {
+                self.delegate?.dismissViewController()
             }
+        default:
+            break
         }
     }
     
     // fetches stored data and dismisses errorViewController if it is the presentedViewController and if there is data to display
-    func reloadCollectionView(completion: @escaping () -> ()) {
-        fetchStoredData { (result) in
+    func reloadCollectionView() {
+        fetchStoredData()
+    }
+    
+    func fetchCompleted(operation: FetchOperation, result: Result<[StarbucksStoreInformation]>) {
+        DispatchQueue.main.async {
             switch result {
             case .success(let starbucksStoreInformation):
                 self.starbucksStoreInformation = starbucksStoreInformation
@@ -99,7 +100,6 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
                 } else {
                     guard let mainViewController = self.delegate as? MainViewController,
                         !(mainViewController.presentedViewController is ErrorViewController) else {
-                            completion()
                             return
                     }
                     self.delegate?.performSegueWithIdentifier(identifier: self.errorSegueIdentifier, error: FeedError.InvalidData)
@@ -107,7 +107,6 @@ class MainViewModel: NSObject,GooglePlacesManagerDelegate, CLLocationManagerDele
             case .failure(let error):
                 print(error)
             }
-            completion()
         }
     }
 }

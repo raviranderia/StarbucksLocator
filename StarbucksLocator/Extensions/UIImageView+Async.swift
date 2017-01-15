@@ -19,7 +19,7 @@ extension UIImageView {
             case .success(let image):
                 DispatchQueue.main.async {
                     self.image = image
-                    dataManager.save(image: image, forId: id)
+                    dataManager.saveImageFromOperationQueue(image: image, forId: id)
                     starbucksStoreInformation.starbucksImage = image
                 }
             case .failure(_):

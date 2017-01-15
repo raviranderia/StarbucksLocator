@@ -31,9 +31,12 @@ class GooglePlacesManager {
                 requestManager.fetchNearbyStarbucksStores(location: location, radius: defaultRadius) { (result) in
                     switch result {
                     case .success(let responseDictionary):
-                        self.mapDictionaryToStarbucksModelArray(responseDictionary: responseDictionary) { (starbucksStoreList) in
-                            DispatchQueue.main.async {
+                        self.mapDictionaryToStarbucksModelArray(responseDictionary: responseDictionary) { (results) in
+                            switch results {
+                            case .success(_):
                                 self.delegate?.fetchedNewStores(sender: self)
+                            default:
+                                break
                             }
                         }
                     case .failure(let error):
@@ -47,22 +50,16 @@ class GooglePlacesManager {
     }
     
     private func mapDictionaryToStarbucksModelArray(responseDictionary: [String: Any], completion: @escaping (Result<[StarbucksStoreInformation]>) -> ()) {
-        if let results = responseDictionary["results"] as? [[String: Any]] {
-            dataManager.removeStoredData() { (result) in
-                switch result {
-                case .success(_):
-                    completion(.success(results.map(){ (storeJSON) -> StarbucksStoreInformation in
-                        let starbucksStore = StarbucksStoreInformation(starbucksJSON: storeJSON)
-                        dataManager.saveStarbucksStoreInfo(starbucksStore: starbucksStore)
-                        return starbucksStore
-                    }))
-                case .failure(let error):
-                    completion(.failure(error))
-                }
-            }
+        if let results = responseDictionary["results"] as? [[String: Any]],
+            results.count > 0 {
+            dataManager.removeStoredData()
+            completion(.success(results.map(){ (storeJSON) -> StarbucksStoreInformation in
+                let starbucksStore = StarbucksStoreInformation(starbucksJSON: storeJSON)
+                dataManager.saveStarbucksStoreInfo(starbucksStore: starbucksStore)
+                return starbucksStore
+            }))
         } else {
             completion(.failure(NetworkOperationError.errorJSON))
         }
-        
     }
 }

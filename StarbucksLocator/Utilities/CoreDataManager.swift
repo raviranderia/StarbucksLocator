@@ -13,114 +13,34 @@ import CoreData
 
 class CoreDataManager {
     
+    private let mainManagedContext: NSManagedObjectContext?
+    var operationQueue = OperationQueue()
+    
     static let shared = CoreDataManager()
-    private init() { }
+    private init() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        mainManagedContext = appDelegate.persistentContainer.viewContext
+        operationQueue.maxConcurrentOperationCount = 1
+    }
+    
+    func saveImageFromOperationQueue(image: UIImage, forId id: String) {
+        let operation = SaveOperation(managedObjectContext: mainManagedContext!, saveOperationType: .saveImage(image: image, forId: id))
+        operationQueue.addOperation(operation)
+    }
     
     func saveStarbucksStoreInfo(starbucksStore: StarbucksStoreInformation) {
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity =  NSEntityDescription.entity(forEntityName: "StarbucksStore",
-                                                 in:managedContext)
-        
-        if alreadyExists(id: starbucksStore.id!) {
-            print("already exists")
-        } else {
-            let store = NSManagedObject(entity: entity!, insertInto: managedContext)
-            
-            store.setValue(starbucksStore.id!, forKey: "id")
-            store.setValue(starbucksStore.name!, forKey: "name")
-            store.setValue(Double(starbucksStore.location!.coordinate.latitude), forKey: "latitude")
-            store.setValue(Double(starbucksStore.location!.coordinate.longitude), forKey: "longitude")
-            store.setValue(starbucksStore.formattedAddress!, forKey: "formattedAddress")
-            store.setValue(starbucksStore.photoReference, forKey: "photoReference")
-            
-            do {
-                try managedContext.save()
-            } catch let error as NSError  {
-                print("Could not save \(error), \(error.userInfo)")
-            }
-        }
+        let operation = SaveOperation(managedObjectContext: mainManagedContext!, saveOperationType: .saveStarbucksStoreInfo(starbucksStore))
+        operationQueue.addOperation(operation)
     }
     
-    func save(image: UIImage,forId id: String) {
-        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"StarbucksStore")
-        
-        let predicate = NSPredicate(format: "%K == %@", "id", id)
-        fetchRequest.predicate = predicate
-        var resultsDummy = [NSManagedObject]()
-        do {
-            let results =
-                try managedObjectContext.fetch(fetchRequest)
-            resultsDummy = results as! [NSManagedObject]
-            
-            resultsDummy[0].setValue(UIImageJPEGRepresentation(image, 1.0), forKey: "photo")
-            
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-        
-        do {
-            try managedObjectContext.save()
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-        
+    func removeStoredData() {
+        let operation = DeleteOperation(managedObjectContext: mainManagedContext!)
+        operationQueue.addOperation(operation)
+    }
+
+    func fetchStoredData(delegate: FetchOperationDelegate) {
+        let operation = FetchOperation(managedObjectContext: mainManagedContext!, delegate: delegate)
+        operationQueue.addOperation(operation)
     }
     
-    private func alreadyExists(id: String) -> Bool {
-        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"StarbucksStore")
-        
-        let predicate = NSPredicate(format: "%K == %@", "id", id)
-        fetchRequest.predicate = predicate
-        var resultsDummy = [NSManagedObject]()
-        do {
-            let results =
-                try managedObjectContext.fetch(fetchRequest)
-            resultsDummy = results as! [NSManagedObject]
-            return resultsDummy.count > 0
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-        
-        return false
-    }
-    
-    func removeStoredData(completion: (Result<Bool>) -> ()) {
-        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"StarbucksStore")
-        if let result = try? managedObjectContext.fetch(fetchRequest),
-            let resultObject = result as? [NSManagedObject] {
-            for object in resultObject {
-                managedObjectContext.delete(object)
-            }
-        }
-        
-        do {
-            try managedObjectContext.save()
-            completion(.success(true))
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-            completion(.failure(error))
-        }
-    }
-    
-    func fetchStoredData(completion: (Result<[StarbucksStoreInformation]>) -> ()) {
-        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"StarbucksStore")
-        var resultsDummy = [NSManagedObject]()
-        do {
-            let results =
-                try managedObjectContext.fetch(fetchRequest)
-            resultsDummy = results as! [NSManagedObject]
-            completion(.success(resultsDummy.map(){ (managedObject) -> StarbucksStoreInformation in
-                return StarbucksStoreInformation(managedObject: managedObject)
-            }))
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-            completion(.failure(error))
-        }
-    }    
 }
