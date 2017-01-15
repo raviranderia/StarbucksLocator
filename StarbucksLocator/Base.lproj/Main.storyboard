@@ -101,7 +101,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nCm-J5-uN9" secondAttribute="bottom" id="vtb-ao-MWQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pd0-1R-S39"/>
+                    <navigationItem key="navigationItem" id="pd0-1R-S39">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="3dc-zp-L0v">
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" id="hpH-3Y-LFg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="starbucksCollectionView" destination="nCm-J5-uN9" id="dRB-QY-smz"/>
                         <segue destination="Lgy-sx-VQF" kind="show" identifier="showStarbucksOnMap" id="rlg-3F-pta"/>

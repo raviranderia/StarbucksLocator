@@ -61,6 +61,10 @@ final class MainViewController: UIViewController, UICollectionViewDelegate, UICo
             destinationVC.delegate = mainViewModel
         }
     }
-
+    
+    @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
+        mainViewModel.fetchFreshData()
+    }
+    
 }
 

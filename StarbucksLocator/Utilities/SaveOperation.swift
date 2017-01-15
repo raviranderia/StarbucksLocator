@@ -35,7 +35,7 @@ class SaveOperation: Operation {
                     self.mainManagedObjectContext.performAndWait(){
                         do {
                             try  self.mainManagedObjectContext.save()
-                            print("saved mainNManagedObject")
+                            print("saved image mainNManagedObject")
                             if let masterManagedObjectContext = self.mainManagedObjectContext.parent {
                                 masterManagedObjectContext.perform() {
                                     do {
