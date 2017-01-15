@@ -17,11 +17,11 @@ extension UIImageView {
         RequestManager.shared.getImageFromURL(photoReference: photoReference, maxWidth: maxWidth, completion: { (result) in
             switch result {
             case .success(let image):
-                DispatchQueue.main.async {
-                    self.image = image
                     dataManager.saveImageFromOperationQueue(image: image, forId: id)
-                    starbucksStoreInformation.starbucksImage = image
-                }
+                    DispatchQueue.main.async {
+                        self.image = image
+                        starbucksStoreInformation.starbucksImage = image
+                    }
             case .failure(_):
                 break
             }

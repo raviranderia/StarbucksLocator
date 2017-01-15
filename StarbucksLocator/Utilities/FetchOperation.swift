@@ -33,6 +33,7 @@ class FetchOperation: Operation {
     }
     
     func fetchStoredData() {
+        print("fetching stored data")
         let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"StarbucksStore")
         var resultsDummy = [NSManagedObject]()

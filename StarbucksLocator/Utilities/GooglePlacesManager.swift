@@ -34,6 +34,7 @@ class GooglePlacesManager {
                         self.mapDictionaryToStarbucksModelArray(responseDictionary: responseDictionary) { (results) in
                             switch results {
                             case .success(_):
+                                print("fetched new stores")
                                 self.delegate?.fetchedNewStores(sender: self)
                             default:
                                 break
@@ -52,12 +53,13 @@ class GooglePlacesManager {
     private func mapDictionaryToStarbucksModelArray(responseDictionary: [String: Any], completion: @escaping (Result<[StarbucksStoreInformation]>) -> ()) {
         if let results = responseDictionary["results"] as? [[String: Any]],
             results.count > 0 {
-            dataManager.removeStoredData()
-            completion(.success(results.map(){ (storeJSON) -> StarbucksStoreInformation in
-                let starbucksStore = StarbucksStoreInformation(starbucksJSON: storeJSON)
-                dataManager.saveStarbucksStoreInfo(starbucksStore: starbucksStore)
-                return starbucksStore
-            }))
+            dataManager.removeStoredData {
+                completion(.success(results.map(){ (storeJSON) -> StarbucksStoreInformation in
+                    let starbucksStore = StarbucksStoreInformation(starbucksJSON: storeJSON)
+                    self.dataManager.saveStarbucksStoreInfo(starbucksStore: starbucksStore)
+                    return starbucksStore
+                }))
+            }
         } else {
             completion(.failure(NetworkOperationError.errorJSON))
         }

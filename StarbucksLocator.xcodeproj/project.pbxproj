@@ -13,7 +13,6 @@
 		0D56989E1E2A9BF9009ACB88 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56989D1E2A9BF9009ACB88 /* GooglePlacesManager.swift */; };
 		0D5698A01E2ADD82009ACB88 /* SaveOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56989F1E2ADD82009ACB88 /* SaveOperation.swift */; };
 		0D5698A21E2AE321009ACB88 /* FetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5698A11E2AE321009ACB88 /* FetchOperation.swift */; };
-		0D5698A41E2AE3CC009ACB88 /* DeleteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5698A31E2AE3CC009ACB88 /* DeleteOperation.swift */; };
 		0DD556CC1E29272300407098 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556CB1E29272300407098 /* MainViewModel.swift */; };
 		0DD556CE1E293B6100407098 /* UIImageView+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556CD1E293B6100407098 /* UIImageView+Async.swift */; };
 		0DD556D11E2945CB00407098 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556D01E2945CB00407098 /* MapViewController.swift */; };
@@ -47,7 +46,6 @@
 		0D56989D1E2A9BF9009ACB88 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesManager.swift; path = Utilities/GooglePlacesManager.swift; sourceTree = "<group>"; };
 		0D56989F1E2ADD82009ACB88 /* SaveOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveOperation.swift; path = Utilities/SaveOperation.swift; sourceTree = "<group>"; };
 		0D5698A11E2AE321009ACB88 /* FetchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchOperation.swift; path = Utilities/FetchOperation.swift; sourceTree = "<group>"; };
-		0D5698A31E2AE3CC009ACB88 /* DeleteOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeleteOperation.swift; path = Utilities/DeleteOperation.swift; sourceTree = "<group>"; };
 		0DD556CB1E29272300407098 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewModel.swift; path = Features/Main/MainViewModel.swift; sourceTree = "<group>"; };
 		0DD556CD1E293B6100407098 /* UIImageView+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Async.swift"; path = "Extensions/UIImageView+Async.swift"; sourceTree = "<group>"; };
 		0DD556D01E2945CB00407098 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Features/Map/MapViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				0D1005E51E29123D00C69D90 /* LocationManager.swift */,
 				0DD556D21E29639700407098 /* CoreDataManager.swift */,
 				0D56989F1E2ADD82009ACB88 /* SaveOperation.swift */,
-				0D5698A31E2AE3CC009ACB88 /* DeleteOperation.swift */,
 				0D5698A11E2AE321009ACB88 /* FetchOperation.swift */,
 			);
 			name = Utilities;
@@ -331,7 +328,6 @@
 				0DE2BC301E282B2000046FB3 /* Router.swift in Sources */,
 				0DE2BC211E28151B00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */,
 				0DD556D31E29639700407098 /* CoreDataManager.swift in Sources */,
-				0D5698A41E2AE3CC009ACB88 /* DeleteOperation.swift in Sources */,
 				0DE2BC2B1E28208700046FB3 /* StarbucksInformationCellViewModel.swift in Sources */,
 				0DE2BC281E28203000046FB3 /* StarbucksStoreInformation.swift in Sources */,
 				0D56989B1E2A79B1009ACB88 /* ErrorViewController.swift in Sources */,
