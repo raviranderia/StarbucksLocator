@@ -13,7 +13,7 @@ import UIKit
 enum Router {
     
     static let baseURLString = "https://maps.googleapis.com/maps/api/place"
-    static let privateKey = "AIzaSyAasOCvtgh0rOsZbJ7tInEhhA2nC-08nmA"
+    static let privateKey = ""
 
     case getNearbyStarbucks(CLLocation,Int)
     case getPhotoByReference(String,CGFloat)
