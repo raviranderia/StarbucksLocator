@@ -1,0 +1,823 @@
+{
+   "html_attributions" : [],
+   "next_page_token" : "CpQCAwEAAG0P4j_-JHrP-lXWIlmjY0RKzcu9xXpxNxiatZ8SsynudeEOdTrhV70obhpcmAmnT4SU0ssOJo0AAnBMYkCu1b2YpeojK9uX7dQBtrfa1qT6LyjNDZ0_G4NLP8XVfyGTGMNlte9hpe8pdUZjxfzr0tVEVdQA24Sv5Pe0JiFrLM9jomCWRCc2feOJrdWfIL7qf9Q-hYSsrfl1SPeYY39_be3gk-zfp263sgd3NUs6bL74oJhKXnsv83vJVOEmbFxJjPpXOuDiCgVK1lz2Lg-TtuMRFBv2B6DGXNnWUSBKXTObZcSR95rxk8Hw9a9LKZuLdDKHpihlUocR5XR66YSG4Hsc2ixA_oNojZG-jJB9szDrEhCW_ak5FZNxJ-9Yzjovt10PGhTlsyIAPKWL0nWYYv6b_Sr-pdum5w",
+   "results" : [
+      {
+         "formatted_address" : "63-65 Court St, Boston, MA 02108, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3593583,
+               "lng" : -71.05922099999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35945525,
+                  "lng" : -71.0590395
+               },
+               "southwest" : {
+                  "lat" : 42.35906745,
+                  "lng" : -71.0592815
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "3a4752a1b223dac9c2b5ffac682674b1b7b7be1e",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114908642373163564676/photos\"\u003eCarlos Santana\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAADR1sa1tJB3epeST0eHEabWgZSKZ9GwDls18HGZ6d7GsdrJtCtBncS6udY1HWLxHw77ZuOUmbqjXOaCzulQNsCrTpNyZHla0rp_RGl1xdFwJ78MKCRM1lmp954XT9axl5ISj_QVSBLge0lekPxb_kiJ-pJ15Emu5ObQ4cRgf0wJkEhBGGo7gsS00qAIUv_1VBhmWGhS0JDFTIykfI5BzSpIjhjV0S-lGTw",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJnf3a_IRw44kRTLCDXPuX6bU",
+         "price_level" : 2,
+         "rating" : 4,
+         "reference" : "CmRSAAAAr97zOKL47X_TT5UbV46uAhRk0H3So4x4DhoUOVbAS4gMsihILclm2XyYLtI5_Q0lPCA4xkY3P3c5SoNGjdjkLTXoVcHQUf_oU11rO55iroQQLQgdoBpkbE11zT3cCZIPEhAkcqoEZ4UVb8Lnb7_mvfqJGhRxgW5-2s4iFI0F6fR-VpQ4biDE5w",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "84 State St, Boston, MA 02109, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3591853,
+               "lng" : -71.0556259
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.3592182,
+                  "lng" : -71.05544685
+               },
+               "southwest" : {
+                  "lat" : 42.3591294,
+                  "lng" : -71.05574105000001
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "e9706d46e78e7f8807d335f559aede0db885f449",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103269748650426657995/photos\"\u003eDomenic Leo\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAPqNwVBrSs-snhfsctSpQZfFwTi0nVyGqkBS-fgLqve67d41S00xmYD6-LyN7jM2fd7OoGxg0lAHD-CPHbJrFiXHvwOIl4mVefO5K-oAbiFjGR85WUGpyrQCF21RfRicojtXLYUKq58MRPfI3YtlALlLMpI9mM-gTfldC7Dygns4EhBdFWsxKT1rSgZJDSP-rNsKGhSI7MDymP93bTjAO3UhNi3NaOqEEQ",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJ-2Skf4Zw44kRd-6OOJ6vygQ",
+         "price_level" : 2,
+         "rating" : 4,
+         "reference" : "CmRRAAAA0BQDzquYN2FXvERejVIQ9jMHaAJlok9hg7yYf_dHtSmoUdhg7B9W_PtAW_S8sRS-0rfEOXsXWgxuk2sbGwgF6JIyJERRaia2jdeNfmlcDiyW2J0SeUQIoyz2Wfdkav0REhC-GlJ0xQJhF2fFw3DxrqmJGhSzugmnw77-qCdr7k3UHscDTgkGOA",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "1 Federal St, Boston, MA 02110, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.356101,
+               "lng" : -71.05699899999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35615095000001,
+                  "lng" : -71.05645525
+               },
+               "southwest" : {
+                  "lat" : 42.35608434999999,
+                  "lng" : -71.05718024999997
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "7e7cc050826bd8f77b5a6d54be35b43b964de2f7",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 546,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104700742106533744480/photos\"\u003eStarbucks\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAHJti0jDa5rao7dBjMUyipuQdef0tZ4AHcO9Y4lOKN40cxE75_iriOBfqWNG6wGIA1a7b0c1VFphpAY8Ct9F2TH2ZgjyPZ2IOfQfUlKFKlRcwGQ63g_ZDn3XAkRyDMNmJlg2drv-pJxYLJga1biqJccYc_tAtPTXMxPgADU5R3EJEhAxRvFt4h9_I53GQKDAF0XSGhQiyCaqqm2lC-4-1FCFN7e5JA4ORg",
+               "width" : 502
+            }
+         ],
+         "place_id" : "ChIJtRJk7oNw44kRvzTX_fqsue0",
+         "price_level" : 2,
+         "rating" : 4.3,
+         "reference" : "CmRSAAAA8bCmVeScakCkpuOVFbm5Dkl-VOv6meIqlBr1-uMZqxy3xGXydgGYNh3WO8RZxHicNhLx-u0bhNTgoFX-wB_0oS7kEnBkHt0LG4auwaaPGdUzD1unZvzdHp27CST2bxshEhCYx0PILdzvJGdvyiAK81hYGhQK61qGTzeQpxlvdmYrUkxrqh7o0w",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "4-1/2 Winter St, Boston, MA 02108, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3556178,
+               "lng" : -71.0610894
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35575549999999,
+                  "lng" : -71.06099339999999
+               },
+               "southwest" : {
+                  "lat" : 42.3555719,
+                  "lng" : -71.0611214
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "245ecc5adf83570b790ae278c833d3aa8aa192cb",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 3264,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115254112102413449879/photos\"\u003eAziz Alibrahim\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAGh4w7iiu6r_mKU4DN6gkNqXJ7OwYe4Zz4bvYLvwO6DqiBlSLa8x35H0t2ZVEDbH5krCNOnRnJ4STKW44EVUxVI2reZgF4kb1sSaQscuSvXPgp-Be8rzj_uf9EFVWZ3XOk99cZLrbVrMoVHGNBjlwuFF-V2v6QUIH4pPRh3QJPCaEhB5TSF4WyusqrnYoKaI2U68GhTlghg4k2lR0Q7NaG35scQSIRlD5w",
+               "width" : 1836
+            }
+         ],
+         "place_id" : "ChIJZW3BL4Nw44kRH9Ct6egUdAE",
+         "price_level" : 2,
+         "rating" : 4.2,
+         "reference" : "CmRRAAAAM2Mk0NFsEUJjpVnPBiCbQK-1sgkaMUU9gDaud0Xwl-8YNwIrm0vb1CL1gznAeJvVkIiafTkAz0uDmCy9ftLwRVPjJA_hvarwDiHr_6xrC44pBqe0It-pS7x8uS2GJLofEhDbhM50k_TH-qPpq8xYFQqxGhTEmcayjLdS-EjJgP78ZcsbIeORZA",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "222 Cambridge St, Boston, MA 02114, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.36098200000001,
+               "lng" : -71.06651859999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.36118885,
+                  "lng" : -71.06651305000001
+               },
+               "southwest" : {
+                  "lat" : 42.36091305000001,
+                  "lng" : -71.06652044999997
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "89438601d1d0e60064a0f807091619cd7eea21f2",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 546,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/117650159065287555478/photos\"\u003eStarbucks\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAA3BW3Tqv_QvID7SK2mRfO7cl21JKphoqyK6PwIKTmutU7YI6M2U6sTU4XBMLqcsIE93j6x-9sYof6wJtvzzHZDZQ08kg_WvTsf8Brf0Kb1M6B_qRgqPcQ7sDlgv8be-FXhMcTy4L1Bf85brwqpNQawSPPz1Ywo8mbhmh34ZOvEqEhA3aKwBTQOQAW5VlTkbPRXGGhQwhFukcxh9OJmYU5vQkABpl4dykQ",
+               "width" : 502
+            }
+         ],
+         "place_id" : "ChIJ-2Skf4Zw44kR4kw-UYafqDk",
+         "price_level" : 2,
+         "rating" : 4.2,
+         "reference" : "CmRRAAAArMc4ER-3icQdOmjOE80NUXxoRUoNuTQwSfPsv_V8p7_rBymnFoBnK-V-Eo6hWRSu6Tz9ZSvoInSEio2iL4HF6HJA-uaG5-IEKJZ6_kvOerOZkYqqD7pnsGfpgIpXL-9IEhD7TIS00Mn22bIy-8NtGipuGhQRNj78h7XvLoFS9r7skVciJen2HA",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "296 State St, Boston, MA 02109, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.360179,
+               "lng" : -71.050786
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.36038415,
+                  "lng" : -71.0506925
+               },
+               "southwest" : {
+                  "lat" : 42.35956354999999,
+                  "lng" : -71.0510665
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "9090c484e199c53473c3731af1d9f32a0dc926d2",
+         "name" : "Starbucks",
+         "photos" : [
+            {
+               "height" : 1520,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104701845955524637324/photos\"\u003eTim Hannafin\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAN5QNQMhccbtX8ngMIdw_GDPwcAlOvgLwIbLDFuxNK670fPhyqLAA-pMqx2r4wPHPTAxOnPAAy0h7T7zcCRMbD5vegkJpFlc1MkDIGf9clXBcSs0bbT6mUpl_tM1_Dl8Dm6kN_t7CdS4MCEv0BN8dgQYxSyO4i-CiroC_lt6mXI5EhBshZB96YUHdaYt2An8VZLRGhQpusH8uzNqUiv46jc5ONQ1ZcGxNA",
+               "width" : 2688
+            }
+         ],
+         "place_id" : "ChIJm9rxyIdw44kRLuTtIyGPiPA",
+         "price_level" : 2,
+         "rating" : 3.6,
+         "reference" : "CmRSAAAA8BdXsoBD07lBUuq6irxwgolnPYwMkaZeqYhxaPUdDTp34W1Yc_IkN1CfrW8uQjwUN6FCc1tcIJIbsuV1F14bY_rtWJ_7vFVvHdKDc2fTBUwDnDG8gYylE5EMp9jekYTMEhBmLLuSxmdhxGnq1krt80gzGhT6anLJ_k-IMoMc7zZz6QCW5ajXZQ",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "1 International Pl, Boston, MA 02110, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.35589609999999,
+               "lng" : -71.05263529999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35596694999999,
+                  "lng" : -71.05255114999999
+               },
+               "southwest" : {
+                  "lat" : 42.35568354999999,
+                  "lng" : -71.05288775000001
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "9894ad601804e76c93a84bbab90517c2e9b40e83",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 546,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/107461749701485168627/photos\"\u003eStarbucks\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAGd7Md5QBmNvFb45asCS1wjAhCmkF1zyVceRj6EKDlfAEOcB-zqm0XSaQCGiFMZ6smKnyW_JeCmOSTxPJcfYHqd6tssLUwbMxiQ6aWiZiaa4m35goNpY9N6dMsHBienuTOISabQ3s1ufAdulJRRV3cAHw9fRnXUXkti0FjoQH6B4EhDQ5oum1gBvHGzL5kM_PEtBGhTEF41qrXVsr83Xchgsk0L9jMQ4Rg",
+               "width" : 502
+            }
+         ],
+         "place_id" : "ChIJRYf4MIdw44kR8hTGssJctUU",
+         "price_level" : 2,
+         "rating" : 3.8,
+         "reference" : "CmRRAAAAfBnPaZt-RRSMmJ1ticGZwkr8QPOo5m5WwpIwUSkJVBxRddl_ZB_H1yrwpSNPqsM9Oyeo638BtT9590HhBdAuk92PtfGOrZj1qHjQF5O8-lheqdXCrZWAnYqvUAtV_n8PEhCGhjJtNQjKaTzoHiorKCRDGhRb3kIbEPAH69u9yxX5ksUhEetplw",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "211 Congress St, Boston, MA 02110, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.354645,
+               "lng" : -71.05491460000002
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35478195,
+                  "lng" : -71.05464834999998
+               },
+               "southwest" : {
+                  "lat" : 42.35459935,
+                  "lng" : -71.05500335000001
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "e10e864b7b7db7722f71df2a5235cbff50e3b4ff",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 546,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112475429040970316584/photos\"\u003eStarbucks\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAFMCk10SIaEjtlS_ZER78CudURQcrj3PaL9kCtTYoNekKaLYAIGIU09D5W0L_-xwMP-ZkYIWbjF-wLu-xNapuJLhyCvO5OusW2nyIEgEwqdsClcV69aba1QLgBApyw8pTh9fqiPyErAWlOnjnJDKJxuGmSs51kQC0tOepFFROjNiEhB7DezsSQXOSag-ECfK0U3yGhTivf6POWZZxLU8ihSUpFKkTI8eQQ",
+               "width" : 502
+            }
+         ],
+         "place_id" : "ChIJ__0vcIFw44kRHji15ntQusE",
+         "price_level" : 2,
+         "rating" : 3.9,
+         "reference" : "CmRSAAAANxcuSYC3h0Y2JOeu7Q2SAm5LdnCMQSq7L4ZPeRw9SaY270snIIXJb5kA_rXcXgaJ7bzIyoCxfBI85OzekQJHSBplER2cQi6qXsmnbJdxoiOO0Up_hVALuvioBz_yKB6pEhABEuyz9xvx_ItacBEm60d1GhSe5heLmbN5bonJqwI_KuhRifqaQg",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "2 Atlantic Ave, Boston, MA 02110, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.36396870000001,
+               "lng" : -71.05080219999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.36407060000001,
+                  "lng" : -71.05068064999999
+               },
+               "southwest" : {
+                  "lat" : 42.36366300000001,
+                  "lng" : -71.05116685
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "3615dee094797f9047fcd0c6c15e396656004430",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 1440,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113301038065489540680/photos\"\u003eKeri Campbell\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAMp425mC7MWTZnb3BWWJL-Uxp7zgW55GwBxpUP8H4ttrdHa6h7LDXGDg7HHlrLXYIcWuZ5inJwJ6N_oRvTLOuWNlsk4SFq6uGxr7x4ASkAsVjzom3IgWT7zVNjltEwBLzbm4dG1ztIlw1CR8sVSdSCMGE_PPvWsjfmoJyGLN0cmgEhDA06aMln2TCx-sEu6IFyy8GhTogPC-wYjArsZ4wlqOFR7nz5N9eg",
+               "width" : 2560
+            }
+         ],
+         "place_id" : "ChIJS9lgwYlw44kRDM2mWwJforc",
+         "price_level" : 2,
+         "rating" : 3.9,
+         "reference" : "CmRSAAAAejNboMpudox5z2rcwjVMH2i6HTMwoA-ofvEWqKQCE6rZrUT-9DeXybYyC7GOrFGNxBumX6u1lF-dVenkYFP9EFPpUSfI-Eqvph1Ac_rXQaKMO9zmQCbbFMeR8JX5yBW1EhC8aMR4YhtmFTaG7iK0cFA8GhRdlJ9Zw_0SJySh-Sl25VRQow8y5A",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "125 Summer St, Boston, MA 02110, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3532077,
+               "lng" : -71.0575698
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35346299999999,
+                  "lng" : -71.0573895
+               },
+               "southwest" : {
+                  "lat" : 42.35312260000001,
+                  "lng" : -71.05762989999999
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "788940e99f565492b9a9bac54052de4f6f01caf0",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 546,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103228806779615028005/photos\"\u003eStarbucks\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAIWzbx4mZq_7f8tBXaIFMHFGRwwrjc6o2vEBIft0pQnDYCsQamkTuIWTLiS1ZsOIBFIuuT5_YQz19aeAwniK9V-pTEg-7YLOfVG8TkW56QXYOtgzab8YAqEwsbEwb1exUZvc2hlMee6gQGhf9tfTp6hoi6qJxzqD6D1WHZSCPihyEhCf71J2EPLN1FDt3QIulANOGhRtfp4n7XP7achuBRyhMfJkj-5nnw",
+               "width" : 502
+            }
+         ],
+         "place_id" : "ChIJ_cJcaYJw44kRq5rMXr66aMI",
+         "price_level" : 2,
+         "rating" : 4,
+         "reference" : "CmRSAAAAfWziCc6UKFwhx_fon1Hn1LUvwO56hC-NMzY7_SPn8T-qQRsMW0jJfafny0nCtnFNIWwP7a2zN2s8VhQzTjscfR0vPqfLQx-ZiluI4gzTEa4U3onTKz-_h6CPTOo8OkNtEhBjrQ1Ts7ag60Yq91mn2k3mGhTguSMkYEu0_ujA6osjjkPjiqHITw",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "66 Beacon St, Boston, MA 02108, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.35632400000001,
+               "lng" : -71.0693433
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35636825000001,
+                  "lng" : -71.0692947
+               },
+               "southwest" : {
+                  "lat" : 42.35619124999999,
+                  "lng" : -71.0693595
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "1a16bd1f9e33d25e7d8664f3df074777208b3dd2",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 5312,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115334704468710523276/photos\"\u003eDiane Ricard\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAADeC7jzJUbjVIR04Vx2L-q2SgwBDpawfnGJvx5SDKTnjKXMaVPVXmtSxFctM2DKUbnZB8YAnHEHRl_d6exN5mwLoyQ-h9UfphWE8ti28PvDF-rraQQOTo35IlSduC0bhb5tx8klgN_rEM_2wPGuUSis5nBeeyRwc5x6ZnASD8eWwEhBCzcqkS6V50NsaiLtDbOxuGhT9D8rACa3wuFoo2P2Dpa9_Y7gvdw",
+               "width" : 2988
+            }
+         ],
+         "place_id" : "ChIJh9ONXp5w44kRjaiElgcABnc",
+         "price_level" : 2,
+         "rating" : 3.9,
+         "reference" : "CmRRAAAAimxShFA1wj9ImnX6d3e5C1L3vwX0Xk_FWJOL_zWFw6-UwtS4qcCTlmvNDPrEl7VE4X3dterTRP63L7Y1kRbPpNrY-T8gdG-61A7Z7f9kMI8yzQ0ogKr6rEawK3rsCGeVEhDYZquoGxCDj36BeKLE0QKUGhSYHQYjrDbG-LYTLpJiyLUziKvtGA",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "62 Boylston St, Boston, MA 02116, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.352251,
+               "lng" : -71.06443899999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35239395,
+                  "lng" : -71.06441679999999
+               },
+               "southwest" : {
+                  "lat" : 42.35220334999999,
+                  "lng" : -71.06444639999999
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "a1530dd7ec14526f1c0cf75dbb40c1fd695cfec0",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 2952,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106395695694224340657/photos\"\u003eDuncan Stewart\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAPJuM7PwFQHeX8YZVKYy5iDlchHFlob5vzG7iS1tgvWGsQj2fx1ZWNj4nk305OgfGDSpA6J8Sqt5EMusOpvjwwjU_T9ba4aa4GQGCvTaiDzGROfw0ZGRSjNjNSH448bqrCPlXm_vEtxIr1lVsRRD-bDlQs_azCHXWjiCXKAs50YyEhCwQrEvdmlj-5241y5YgXSfGhQu-Ff5MNK7zMZkM6w8F53fbdXUhw",
+               "width" : 5248
+            }
+         ],
+         "place_id" : "ChIJjZgq9HZ644kRq2tYv1TA-Z8",
+         "price_level" : 2,
+         "rating" : 3.8,
+         "reference" : "CmRSAAAAc1h6Y-kefR-ImqGVZasSWXCeZks5mnduncWvQpM-Qe9Zw3otyl9oLcdxASkrNnSkDtdRZiJmNQLUFWn-HsDmQE77ezXYYAij2yaQFIRvRVV4FhjrmfY3n_XhWJ3Ks6IlEhDEaUNYTWyPddD07bgqGSRAGhT4hmef_OlTL0wLmLHwtdfawe8HPw",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "97 Charles St, Boston, MA 02114, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3588785,
+               "lng" : -71.0705772
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35888189999999,
+                  "lng" : -71.07050015000002
+               },
+               "southwest" : {
+                  "lat" : 42.3588683,
+                  "lng" : -71.07080834999999
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "cb98592221a587652e86eb93dbb9ff168ff4c264",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 1224,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113039924249221838778/photos\"\u003eJoseph Santiago\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAALvw4fUbOzkEkzH4jelBgSkwc2VvB7pNRo_tziveP9LlDh_eC0PDsN2KXsN6cZxpCQD1KI19zL9lpd9jLUcqJldJO4PX94kf-YuIA0pHON5p-fdFWAJOxQg8p3qCLYGGiMweN2vTZUnx0nm8DZFkyYPPzPnowW8i5b_E8Et_6qPQEhAhl7GD-xIe_fN_Izl7ncFIGhRkT6iiWkeaSSLWAgRsV18FhwAhHg",
+               "width" : 1632
+            }
+         ],
+         "place_id" : "ChIJQ9P_1Z5w44kRHyWSORiwmKA",
+         "price_level" : 2,
+         "rating" : 4.1,
+         "reference" : "CmRSAAAALbRzhxp3uqg1fO-b91eKLiC-Bx09DyMgoNg5ZEbXHkyuzdN75qtHpUiKpQWM6tf1T9o4l-zLln0Qg0CULd5mRk_Arq1uO7jehftjq3FR1dTzkFXqr5ep_mnkYoMsjO_tEhCJc2IPppm3cZBV-5i5mpacGhRjq3H24v9NW-YWNO4j6gNWwznQIQ",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "12 Charles Street South, D-2, Boston, MA 02116, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.35209859999999,
+               "lng" : -71.06712209999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35257079999999,
+                  "lng" : -71.06521844999999
+               },
+               "southwest" : {
+                  "lat" : 42.350682,
+                  "lng" : -71.06775665000001
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "f486e6bedf5a5ba9551ba5bd34a8b4c3fe4e5249",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 546,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/107988708613612131022/photos\"\u003eStarbucks\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAHwEMP8yutazqlAVuhdGTFvK3-ozoWUtsrxy8HISens-a0TFZdvI_ofsJspTAikYxUzaSgTg7M-9KGLQWMGUFN54BxHPTJwb_Ery_rdy3K4K4nKi5sRABmBHsqHGvgLgrZ3u8_HfbrUy2v9sQd2oFEQAR4UfMf85a_ueu-eup6JQEhDfaObZU3DUvxp6Z-LqBRUwGhQoJNn1zEO3manJF7GukWDHLDtOyg",
+               "width" : 502
+            }
+         ],
+         "place_id" : "ChIJjZgq9HZ644kRaBriiQVwmbA",
+         "price_level" : 2,
+         "rating" : 3.8,
+         "reference" : "CmRSAAAA1FortseAo1jdZFq2AwNeGiK5KHb_B60XoNJ4cYuV4aRJVCLhQ0_ATIiRBBl48SKcZskmxruH5mxgmpGuFHZRQsarSYtgkfKqNhHmCX-7QmM-P2I1-afE6-P4kDQLQHIvEhA-xUw94WVtEtSQ7-uM7p_nGhRHx_iQ9eLBVrotEpMT0_YctjfPjA",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "443 Boylston St, Boston, MA 02116, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3515343,
+               "lng" : -71.0730563
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35166125,
+                  "lng" : -71.07285065000002
+               },
+               "southwest" : {
+                  "lat" : 42.35115345000001,
+                  "lng" : -71.07312485
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "3582dac74f0aeb512008f5eabec64712f78d1cfa",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 1296,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114809750710052551757/photos\"\u003eAleksandr Biyevetskiy\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAALGY2jM54BJ0EKAKKWLpOe5kPBcoLX-8JZHo7eL8emsZkIGDnwdraEysjl89ng0_UUHaAHFQemnkislZWmAjuTAMoZwzXdCPNqwSixUVoWBJj0DpMkFNGffsHHZpfql_DQqNyjkWEq_8HoI5TCCfEys_-DHKEcye9AlHlubZMMgrEhCfus7bHGGEhlFrM1P7EwRLGhQpfiCZEj08UGe-GxMs1N0YlZup7w",
+               "width" : 2304
+            }
+         ],
+         "place_id" : "ChIJi3QBy3R644kRf8V8mKHzaWI",
+         "price_level" : 2,
+         "rating" : 3.7,
+         "reference" : "CmRRAAAAl0NvuKk65SATu5eNBtVMwA3yP8DFMque5UsqTSO07HsvTJzllVuive5AAbjUvtAEPpXqkeQ-IjK2c7Sm5lB7n2HFzOUUP4rHyr3WC_zCkZJqebek5G7rYpW_ROhThNsyEhBlClgVhmbXIhEzjE3PnefSGhTicC1Ayu7FM4fmzYB90s__B10bNw",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "100 Cambridgeside Pl e108, Cambridge, MA 02141, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3674525,
+               "lng" : -71.076121
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.36763835,
+                  "lng" : -71.07592169999999
+               },
+               "southwest" : {
+                  "lat" : 42.36689495,
+                  "lng" : -71.07671889999999
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "93ccadb40b01bd22e1fc28b45d6c705bd542d097",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101829257039339246225/photos\"\u003eDavide Malagoli\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAALxt3zRdyLyt6tbCIHfY9r7ikqsMNqerNqUXHbdQSCRlPh519zOgnmYNSs4dH6U9RF1Q-3e182lS_0oCcIG4MMSk95Ao_wHD62k7ThpedsqRevr8IPqoriWVLPg7Dbtz5e7gE1O2ggaUAFvHKMI4VgJwnY08ou2LsUw9Cs9VrIZrEhDs7Hq2-M3R17T9cUJkLYhLGhSV-HIU0wlHya69qFNwu4zTOGEIFA",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJ96VTAL1w44kRZgnfFtw9TEQ",
+         "price_level" : 2,
+         "rating" : 3.4,
+         "reference" : "CmRRAAAAwVEHtvZ97gm_zMWsf1qg-SvL1G6BfBxpl3Qrk7tHupCtdmooIzWu9yrTbE9KKsOSMqF4dgBzCaJXKnWSPXD5SyaRBPpfCna5o3TjD7TLzKU6OWZliz48Vpp3hAlmGvTsEhBrTiOabrsggUXg--pvBmJoGhRJxLsSKRG6znC-sB7evU3iu8a0tg",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "48 Pier Four Blvd, Boston, MA 02210, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.35348889999999,
+               "lng" : -71.04647709999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35357874999999,
+                  "lng" : -71.04640234999999
+               },
+               "southwest" : {
+                  "lat" : 42.35321935,
+                  "lng" : -71.04670135000001
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "cecfb577605bf3cc7ecd976e43a7d84cb2b88e7b",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 2988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101161721837417615109/photos\"\u003eSolomon Wong\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAALvH7yz0tP5uR4J8ybzbsh3nw0G19FATm6gc7FLJwR0-I9sq85fmqkqisYSvHqBeHlgV-g6DnWqogPZBeQM-DgYMzBV_EMSsxRkT4IgUWcbGHLNntcfHzfkTHqnQJe9-qDyOqdQfM0sIMDBSjmhq1XWnrjCcp5ENbnEVqP3QVencEhBgrQwRFhsCfLCecaZUr5_kGhT_Hy_wsvavspmRjHnSTlC9qrHOQA",
+               "width" : 5312
+            }
+         ],
+         "place_id" : "ChIJP5Wl5n5w44kR5zzkYnRvFJ4",
+         "price_level" : 2,
+         "rating" : 4.1,
+         "reference" : "CmRSAAAAG5tltGA1jaWbe7ie5kpsT56A5SJr4mZ_zNNN3e7R1PH3sO41g-mq4lill1fw7QFL9w9gKgeFJunoS5Szv8WPI_zPsmXSbKG9nqGHxLMU15NiTrvwYMchA-jTTkKkS8F5EhCFpDX9CLo-Xx-OWZvgOI8DGhT31iRogywbhZ091GWfJBtmsS5d9g",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "165 Newbury St, Boston, MA 02116, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3508237,
+               "lng" : -71.078834
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.35092215,
+                  "lng" : -71.0786822
+               },
+               "southwest" : {
+                  "lat" : 42.35052835,
+                  "lng" : -71.07888460000001
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "c40347ce8f73a10c8b4156b755f16e0da4ea12fa",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 2566,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111366529749202135186/photos\"\u003eIbrahim Abushoshah\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAMyhCvGdiVsMNXbU9-wie_dBdmdMPVzdehriSfUU_T9-vsTSgiNmn7FUalhzzXi6xiwakHzYSXWU7f270VEKWi3aD8ZqdRh0kT5YfxBuwM-RBtR-Gf196aTIct5-zF2mEYjU8fasfzbrL60MQamwX7xZVq7MFJBN5DV2SN0Wj5KsEhCVURe3fdI1ioh0MYQwi_g8GhQsy35-izmb0vN7EujFLXI0uFQ9mg",
+               "width" : 2566
+            }
+         ],
+         "place_id" : "ChIJ_Vl2Bgx644kRXVjnhTLQYN8",
+         "price_level" : 2,
+         "rating" : 3.8,
+         "reference" : "CmRSAAAA4zAyWEKIgnWrWMVQN1NQArgmgJrBqza1ymj48tFgkAffZbtwKbAaahWKjsZyIYM-5qBJadA5mxNzrPYZG7ava48GBosdMVybOzja3T-M9-iRLlsZN5mO7egah_Hg56-jEhDRg-A23w_1v3IZWhFFlndGGhRc07Uh6bZ2zweju_3xUg29JbmtpQ",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "10 Huntington Ave d, Boston, MA 02116, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.34845809999999,
+               "lng" : -71.07746059999999
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.34855815,
+                  "lng" : -71.0772917
+               },
+               "southwest" : {
+                  "lat" : 42.34842474999999,
+                  "lng" : -71.07796729999998
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "eedda8f08777082763fa78a544608d478538311d",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 546,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105723577143612386575/photos\"\u003eStarbucks\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAHW9le9617z9L--H9WPGh3JIv7dULvvGtSwxjNzDnEup54GWAdeYF6aV_c_A4donfXEoD4j98n9hHyFQ76eVDsqJTFe5hqr2I8xRaLJDGOQ7Yr9XZw7EXX-TKHZ-UZ-qJrGdE0HJmBAmmnc9geqS3csTIpkX10W2Fv2GQg5iDBElEhC5ppd3WYnB--8anXRTudU1GhRN6q7UMJC776n2-PiGoHVxI_qprw",
+               "width" : 502
+            }
+         ],
+         "place_id" : "ChIJl7FeUwx644kRGwJFi46738s",
+         "price_level" : 2,
+         "rating" : 3.8,
+         "reference" : "CmRSAAAAirBVuYYQTyIyg5wavto3MaVeuXSDnbC9jhQoW80US-DgZZIiyeuq6x1U-IhLdbHWZTLQd8oXvNAb8Hac3XOOUkxg0UCevLb7suSiXYlN1-BZNHwEzMh-NSfpKfSGrfbeEhDVvA5SU-xAM2ttYNhcP9CEGhQ99SKJNqA6xeJSgOTtKl6_VK92iA",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      },
+      {
+         "formatted_address" : "755 Boylston St, Boston, MA 02116, United States",
+         "geometry" : {
+            "location" : {
+               "lat" : 42.3493917,
+               "lng" : -71.0810374
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 42.3495185,
+                  "lng" : -71.0807947
+               },
+               "southwest" : {
+                  "lat" : 42.3490113,
+                  "lng" : -71.08111829999999
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+         "id" : "63fe0c1b4c4276e3691eebb5434567e8be104d0b",
+         "name" : "Starbucks",
+         "opening_hours" : {
+            "open_now" : true,
+            "weekday_text" : []
+         },
+         "photos" : [
+            {
+               "height" : 5312,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/118053895691789559052/photos\"\u003eJay Korff\u003c/a\u003e"
+               ],
+               "photo_reference" : "CoQBdwAAAMm4JpYUDuMLMUnfe9qdQ48wiSC2jcS8gyTEARTnXCWhW77eogAvjG8tiF6NBsUQsvALZllGn13LcGussI2aRPthjbFDnyf5t4r3MZbAqHVwV-oFCcPXX7PzZh5H-ULffpJSF0jzVCf_lwf3YZ6tkWrzhtecLBkgJ4CGitgPtxsGEhBkj2GRiuBDtTFogAdsGrHrGhS6k6H6d2oyOO1khykIbcqsam-3lA",
+               "width" : 2988
+            }
+         ],
+         "place_id" : "ChIJm6ksiw5644kRRfHX6l1kIak",
+         "price_level" : 2,
+         "rating" : 4,
+         "reference" : "CmRSAAAAimYQDeLc73XompolNN7LsNcgVUSSpUWgRQH9joSGMWtkELc0RIsX_8Wgp6UfPUJuwTFFCjQyevB8KzVuqGl7gdF4uR_3NnqPiX0QH5tj6r-auto3lFjbpgnKnkjKJQ1DEhCoExumx1zvlYbszIKZBQw2GhRbiqJRvPrK3j370SiiEgjY8vsT7g",
+         "types" : [ "cafe", "food", "store", "point_of_interest", "establishment" ]
+      }
+   ],
+   "status" : "OK"
+}

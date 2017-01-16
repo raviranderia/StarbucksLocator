@@ -10,14 +10,19 @@
 		0D1005E61E29123D00C69D90 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1005E51E29123D00C69D90 /* LocationManager.swift */; };
 		0D56989B1E2A79B1009ACB88 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56989A1E2A79B1009ACB88 /* ErrorViewController.swift */; };
 		0D56989C1E2A95A7009ACB88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BC181E2814C000046FB3 /* MainViewController.swift */; };
-		0D5698A01E2ADD82009ACB88 /* SaveOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56989F1E2ADD82009ACB88 /* SaveOperation.swift */; };
-		0D5698A21E2AE321009ACB88 /* FetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5698A11E2AE321009ACB88 /* FetchOperation.swift */; };
 		0D66378F1E2A6F44000C36F4 /* FeedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66378E1E2A6F44000C36F4 /* FeedLayout.swift */; };
 		0D6637911E2A6F54000C36F4 /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6637901E2A6F54000C36F4 /* GooglePlacesManager.swift */; };
+		0D93D9C91E2C16820054F8E3 /* SaveOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93D9C61E2C16820054F8E3 /* SaveOperation.swift */; };
+		0D93D9CA1E2C16820054F8E3 /* FetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93D9C71E2C16820054F8E3 /* FetchOperation.swift */; };
+		0D93D9CB1E2C16820054F8E3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93D9C81E2C16820054F8E3 /* CoreDataManager.swift */; };
+		0D93D9CF1E2C1B210054F8E3 /* starbucksGooglePlacesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D93D9CE1E2C1B210054F8E3 /* starbucksGooglePlacesResponse.json */; };
+		0D93D9D61E2C1DE40054F8E3 /* CoreDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93D9D51E2C1DE40054F8E3 /* CoreDataManagerMock.swift */; };
+		0D93D9DC1E2C27860054F8E3 /* LocationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93D9DB1E2C27860054F8E3 /* LocationManagerMock.swift */; };
+		0D93D9E21E2C28EF0054F8E3 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93D9E11E2C28EF0054F8E3 /* MainViewModelTests.swift */; };
+		0D93D9F51E2C4B340054F8E3 /* GooglePlacesManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D93D9D31E2C1B8D0054F8E3 /* GooglePlacesManagerMock.swift */; };
 		0DD556CC1E29272300407098 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556CB1E29272300407098 /* MainViewModel.swift */; };
 		0DD556CE1E293B6100407098 /* UIImageView+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556CD1E293B6100407098 /* UIImageView+Async.swift */; };
 		0DD556D11E2945CB00407098 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556D01E2945CB00407098 /* MapViewController.swift */; };
-		0DD556D31E29639700407098 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD556D21E29639700407098 /* CoreDataManager.swift */; };
 		0DE2BBEF1E2804BD00046FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */; };
 		0DE2BBF41E2804BD00046FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF21E2804BD00046FB3 /* Main.storyboard */; };
 		0DE2BBF91E2804BD00046FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */; };
@@ -44,14 +49,19 @@
 /* Begin PBXFileReference section */
 		0D1005E51E29123D00C69D90 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Utilities/LocationManager.swift; sourceTree = "<group>"; };
 		0D56989A1E2A79B1009ACB88 /* ErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorViewController.swift; path = Features/Error/ErrorViewController.swift; sourceTree = "<group>"; };
-		0D56989F1E2ADD82009ACB88 /* SaveOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveOperation.swift; path = Utilities/SaveOperation.swift; sourceTree = "<group>"; };
-		0D5698A11E2AE321009ACB88 /* FetchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchOperation.swift; path = Utilities/FetchOperation.swift; sourceTree = "<group>"; };
 		0D66378E1E2A6F44000C36F4 /* FeedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedLayout.swift; path = Features/Main/FeedLayout.swift; sourceTree = "<group>"; };
 		0D6637901E2A6F54000C36F4 /* GooglePlacesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesManager.swift; path = Utilities/GooglePlacesManager.swift; sourceTree = "<group>"; };
+		0D93D9C61E2C16820054F8E3 /* SaveOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveOperation.swift; path = Utilities/CoreData/SaveOperation.swift; sourceTree = "<group>"; };
+		0D93D9C71E2C16820054F8E3 /* FetchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchOperation.swift; path = Utilities/CoreData/FetchOperation.swift; sourceTree = "<group>"; };
+		0D93D9C81E2C16820054F8E3 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Utilities/CoreData/CoreDataManager.swift; sourceTree = "<group>"; };
+		0D93D9CE1E2C1B210054F8E3 /* starbucksGooglePlacesResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = starbucksGooglePlacesResponse.json; path = Resources/starbucksGooglePlacesResponse.json; sourceTree = "<group>"; };
+		0D93D9D31E2C1B8D0054F8E3 /* GooglePlacesManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesManagerMock.swift; path = Mocks/GooglePlacesManagerMock.swift; sourceTree = "<group>"; };
+		0D93D9D51E2C1DE40054F8E3 /* CoreDataManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManagerMock.swift; path = Mocks/CoreDataManagerMock.swift; sourceTree = "<group>"; };
+		0D93D9DB1E2C27860054F8E3 /* LocationManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManagerMock.swift; path = Mocks/LocationManagerMock.swift; sourceTree = "<group>"; };
+		0D93D9E11E2C28EF0054F8E3 /* MainViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewModelTests.swift; path = Tests/MainViewModelTests.swift; sourceTree = "<group>"; };
 		0DD556CB1E29272300407098 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewModel.swift; path = Features/Main/MainViewModel.swift; sourceTree = "<group>"; };
 		0DD556CD1E293B6100407098 /* UIImageView+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Async.swift"; path = "Extensions/UIImageView+Async.swift"; sourceTree = "<group>"; };
 		0DD556D01E2945CB00407098 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Features/Map/MapViewController.swift; sourceTree = "<group>"; };
-		0DD556D21E29639700407098 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Utilities/CoreDataManager.swift; sourceTree = "<group>"; };
 		0DE2BBEB1E2804BD00046FB3 /* StarbucksLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE2BBEE1E2804BD00046FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DE2BBF31E2804BD00046FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +104,34 @@
 				0D56989A1E2A79B1009ACB88 /* ErrorViewController.swift */,
 			);
 			name = Error;
+			sourceTree = "<group>";
+		};
+		0D93D9C51E2C16390054F8E3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0D93D9C61E2C16820054F8E3 /* SaveOperation.swift */,
+				0D93D9C71E2C16820054F8E3 /* FetchOperation.swift */,
+				0D93D9C81E2C16820054F8E3 /* CoreDataManager.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		0D93D9D01E2C1B420054F8E3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0D93D9D31E2C1B8D0054F8E3 /* GooglePlacesManagerMock.swift */,
+				0D93D9D51E2C1DE40054F8E3 /* CoreDataManagerMock.swift */,
+				0D93D9DB1E2C27860054F8E3 /* LocationManagerMock.swift */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		0D93D9E01E2C28B30054F8E3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0D93D9E11E2C28EF0054F8E3 /* MainViewModelTests.swift */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 		0DD556CF1E29459800407098 /* Map */ = {
@@ -140,6 +178,8 @@
 		0DE2BC051E2804BE00046FB3 /* StarbucksLocatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				0D93D9E01E2C28B30054F8E3 /* Tests */,
+				0D93D9D01E2C1B420054F8E3 /* Mocks */,
 				0DE2BC061E2804BE00046FB3 /* StarbucksLocatorTests.swift */,
 				0DE2BC081E2804BE00046FB3 /* Info.plist */,
 			);
@@ -184,11 +224,9 @@
 		0DE2BC151E2812E600046FB3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0D93D9C51E2C16390054F8E3 /* CoreData */,
 				0D6637901E2A6F54000C36F4 /* GooglePlacesManager.swift */,
 				0D1005E51E29123D00C69D90 /* LocationManager.swift */,
-				0DD556D21E29639700407098 /* CoreDataManager.swift */,
-				0D56989F1E2ADD82009ACB88 /* SaveOperation.swift */,
-				0D5698A11E2AE321009ACB88 /* FetchOperation.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -196,6 +234,7 @@
 		0DE2BC161E2812F900046FB3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0D93D9CE1E2C1B210054F8E3 /* starbucksGooglePlacesResponse.json */,
 				0DE2BC1A1E2814DB00046FB3 /* Info.plist */,
 				0DE2BBF81E2804BD00046FB3 /* Assets.xcassets */,
 				0DE2BBFA1E2804BD00046FB3 /* LaunchScreen.storyboard */,
@@ -308,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D93D9CF1E2C1B210054F8E3 /* starbucksGooglePlacesResponse.json in Resources */,
 				0DE2BBFC1E2804BD00046FB3 /* LaunchScreen.storyboard in Resources */,
 				0DE2BBF91E2804BD00046FB3 /* Assets.xcassets in Resources */,
 				0DE2BBF41E2804BD00046FB3 /* Main.storyboard in Resources */,
@@ -331,10 +371,10 @@
 				0D56989C1E2A95A7009ACB88 /* MainViewController.swift in Sources */,
 				0DE2BC301E282B2000046FB3 /* Router.swift in Sources */,
 				0DE2BC211E28151B00046FB3 /* StarbucksLocator.xcdatamodeld in Sources */,
-				0DD556D31E29639700407098 /* CoreDataManager.swift in Sources */,
 				0DE2BC2B1E28208700046FB3 /* StarbucksInformationCellViewModel.swift in Sources */,
 				0DE2BC281E28203000046FB3 /* StarbucksStoreInformation.swift in Sources */,
 				0D56989B1E2A79B1009ACB88 /* ErrorViewController.swift in Sources */,
+				0D93D9CB1E2C16820054F8E3 /* CoreDataManager.swift in Sources */,
 				0DD556D11E2945CB00407098 /* MapViewController.swift in Sources */,
 				0DE2BC2E1E282B0500046FB3 /* RequestManager.swift in Sources */,
 				0DE2BC2C1E28208700046FB3 /* StarbucksInformationCollectionViewCell.swift in Sources */,
@@ -343,9 +383,9 @@
 				0D1005E61E29123D00C69D90 /* LocationManager.swift in Sources */,
 				0D66378F1E2A6F44000C36F4 /* FeedLayout.swift in Sources */,
 				0DD556CC1E29272300407098 /* MainViewModel.swift in Sources */,
-				0D5698A01E2ADD82009ACB88 /* SaveOperation.swift in Sources */,
+				0D93D9C91E2C16820054F8E3 /* SaveOperation.swift in Sources */,
 				0DD556CE1E293B6100407098 /* UIImageView+Async.swift in Sources */,
-				0D5698A21E2AE321009ACB88 /* FetchOperation.swift in Sources */,
+				0D93D9CA1E2C16820054F8E3 /* FetchOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +393,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D93D9F51E2C4B340054F8E3 /* GooglePlacesManagerMock.swift in Sources */,
+				0D93D9D61E2C1DE40054F8E3 /* CoreDataManagerMock.swift in Sources */,
+				0D93D9DC1E2C27860054F8E3 /* LocationManagerMock.swift in Sources */,
 				0DE2BC071E2804BE00046FB3 /* StarbucksLocatorTests.swift in Sources */,
+				0D93D9E21E2C28EF0054F8E3 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

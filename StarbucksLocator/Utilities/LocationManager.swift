@@ -11,6 +11,7 @@ import CoreLocation
 
 protocol LocationManagerProtocol {
     func getCurrentLocation(completion : (Result<CLLocation>) -> () )
+    var locationManager: CoreLocationManagerProtocol { set get }
 }
 
 enum LocationError : Error {
@@ -18,14 +19,24 @@ enum LocationError : Error {
     case locationServicesDisabled
 }
 
-struct LocationManager : LocationManagerProtocol {
-    
+protocol CoreLocationManagerProtocol {
+    static func authorizationStatus() -> CLAuthorizationStatus
+    var location: CLLocation? {get}
+    func requestWhenInUseAuthorization()
+    var delegate: CLLocationManagerDelegate? { set get }
+}
+
+extension CLLocationManager: CoreLocationManagerProtocol {}
+
+final class LocationManager : LocationManagerProtocol {
+    var locationManager: CoreLocationManagerProtocol
+
     static let shared = LocationManager()
-    private init() {
+    private init(locationManager: CoreLocationManagerProtocol = CLLocationManager()) {
+        self.locationManager = locationManager
         requestForLocationServices()
     }
     
-    var locationManager = CLLocationManager()
     
     private func requestForLocationServices(){
         locationManager.requestWhenInUseAuthorization()

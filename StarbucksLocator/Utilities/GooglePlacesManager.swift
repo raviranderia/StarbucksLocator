@@ -13,18 +13,28 @@ protocol GooglePlacesManagerDelegate: class {
     func fetchedNewStores(sender: Any?)
 }
 
-class GooglePlacesManager {
-    private let requestManager = RequestManager.shared
+protocol GooglePlacesManagerProtocol {
+    func fetchNearbyStarbucksStores(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ())
+    var delegate: GooglePlacesManagerDelegate? { set get }
+    var requestManager: RequestManagerProtocol { get }
+    init(requestManager: RequestManagerProtocol)
+}
+
+final class GooglePlacesManager: GooglePlacesManagerProtocol {
     private let locationManager = LocationManager.shared
     private let dataManager = CoreDataManager.shared
     private let defaultRadius = 100
+    let requestManager: RequestManagerProtocol
 
     static let shared = GooglePlacesManager()
-    private init() {}
+    
+    internal init(requestManager: RequestManagerProtocol = RequestManager.shared) {
+        self.requestManager = requestManager
+    }
     
     weak var delegate: GooglePlacesManagerDelegate?
     
-    func fetchNearbyStarbucksStores() {
+    func fetchNearbyStarbucksStores(completion: @escaping (Result<[StarbucksStoreInformation]>) -> ()) {
         locationManager.getCurrentLocation { (locationResult) in
             switch locationResult {
             case .success(let location):
@@ -36,6 +46,7 @@ class GooglePlacesManager {
                             case .success(_):
                                 print("fetched new stores")
                                 self.delegate?.fetchedNewStores(sender: self)
+                                completion(results)
                             default:
                                 break
                             }

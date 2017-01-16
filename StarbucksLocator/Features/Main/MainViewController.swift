@@ -23,10 +23,11 @@ final class MainViewController: UIViewController, UICollectionViewDelegate, UICo
 
     @IBOutlet weak var starbucksCollectionView: UICollectionView!
 
-    private var mainViewModel = MainViewModel()
+    private var mainViewModel: MainViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainViewModel = MainViewModel()
         mainViewModel.delegate = self
     }
     
@@ -82,7 +83,7 @@ final class MainViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
-        mainViewModel.fetchFreshData()
+        mainViewModel.fetchFreshData(completion: nil)
     }
     
     func panViewGesture(sender: UIPanGestureRecognizer) {

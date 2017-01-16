@@ -16,7 +16,6 @@ class StarbucksInformationCollectionViewCell: UICollectionViewCell {
     
     func configureCell(starbucksInformationCellViewModel: StarbucksInformationCellViewModel) {
         self.addressLabel.text = starbucksInformationCellViewModel.address
-        
         starbucksImageView.image = #imageLiteral(resourceName: "Starbucks_logos-9")
 
         if let starbucksStoreImage = starbucksInformationCellViewModel.starbucksStoreImage {

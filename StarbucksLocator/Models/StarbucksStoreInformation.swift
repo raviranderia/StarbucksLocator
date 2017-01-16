@@ -11,7 +11,7 @@ import CoreLocation
 import CoreData
 import UIKit
 
-class StarbucksStoreInformation {
+final class StarbucksStoreInformation {
     private let requestManager = RequestManager.shared
 
     var formattedAddress: String?
@@ -21,7 +21,8 @@ class StarbucksStoreInformation {
     var id: String?
     
     var starbucksImage: UIImage?
-        
+    
+    // From JSON recieved as response from network request
     init(starbucksJSON: [String: Any]) {
         if let formattedAddress = starbucksJSON["formatted_address"] as? String {
             self.formattedAddress = formattedAddress
@@ -52,6 +53,7 @@ class StarbucksStoreInformation {
         }
     }
     
+    // From NSManaged object recieved as response from CoreData
     init(managedObject: NSManagedObject) {
         if let formattedAddress = managedObject.value(forKey: "formattedAddress") as? String {
             self.formattedAddress = formattedAddress

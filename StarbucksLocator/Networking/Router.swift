@@ -42,7 +42,7 @@ enum Router {
         }
     }
     
-    func addParametersToRequest(url: URL, params: [String: String]) -> URLRequest {
+    private func addParametersToRequest(url: URL, params: [String: String]) -> URLRequest {
         var parameters = ""
         for (key,value) in params {
             parameters += ("&\(key)=\(value)")

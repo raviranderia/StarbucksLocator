@@ -22,8 +22,12 @@ enum NetworkOperationError: Error {
     case notValidHTTPResponse
 }
 
-struct RequestManager {
-    
+protocol RequestManagerProtocol {
+    func fetchNearbyStarbucksStores(location: CLLocation, radius: Int, completion: @escaping (Result<[String:Any]>) -> ())
+    func getImageFromURL(photoReference: String, maxWidth: CGFloat, completion: @escaping (Result<UIImage>) -> ())
+}
+
+struct RequestManager: RequestManagerProtocol {
     static let shared = RequestManager()
     private init() { }
     
